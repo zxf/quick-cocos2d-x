@@ -11,6 +11,9 @@ extern "C" {
 // zlib
 #include "zlib/lua_zlib.h"
 
+// pomelo
+#include "pomelo/lua_pomelo.h"
+
 // lpack
 #include "lpack/lpack.h"
 
@@ -30,6 +33,7 @@ extern "C" {
 static luaL_Reg luax_exts[] = {
     {"cjson", luaopen_cjson_safe},
     {"zlib", luaopen_zlib},
+    {"pomelo", luaopen_pomelo},
     {"pack", luaopen_pack},
     {"socket.core", luaopen_socket_core},
     {"mime.core", luaopen_mime_core},
