@@ -1,8 +1,0 @@
-class CCExposureFilter : public CCSingleFloatParamFilter
-{
-
-public:
-	static CCExposureFilter* create();
-	static CCExposureFilter* create(float param);
-	void setParameter(float param);
-};
