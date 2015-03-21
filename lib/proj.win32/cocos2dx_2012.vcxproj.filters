@@ -340,6 +340,9 @@
     <Filter Include="cocos2d-x\scripting\lua\lua">
       <UniqueIdentifier>{a749176d-bd4d-4aae-9e2c-33df575211e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="cocos2d-x\scripting\lua\lua_extensions\pomelo">
+      <UniqueIdentifier>{bd864c31-7bd3-4650-b485-472a24ab696c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\cocos2d-x\scripting\lua\cocos2dx_support\CCLuaEngine.cpp">
@@ -1664,6 +1667,9 @@
     </ClCompile>
     <ClCompile Include="..\cocos2d-x\scripting\lua\lua\lua-5.1.5\src\print.c">
       <Filter>cocos2d-x\scripting\lua\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d-x\scripting\lua\lua_extensions\pomelo\lua_pomelo.c">
+      <Filter>cocos2d-x\scripting\lua\lua_extensions\pomelo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -3298,6 +3304,9 @@
     </ClInclude>
     <ClInclude Include="..\cocos2d-x\scripting\lua\lua\lua-5.1.5\src\lzio.h">
       <Filter>cocos2d-x\scripting\lua\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d-x\scripting\lua\lua_extensions\pomelo\lua_pomelo.h">
+      <Filter>cocos2d-x\scripting\lua\lua_extensions\pomelo</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -12,7 +12,7 @@ static const luaL_reg pomelo_functions[] = {
     {NULL,  NULL}
 };
 
-int luaopen_pomelo(lua_State* tolua_S) {
+int luaopen_pomelo(lua_State* L) {
     luaL_register(L, "pomelo", pomelo_functions);
     return 1;
 }
