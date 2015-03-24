@@ -100,6 +100,9 @@
     <Filter Include="Classes\quick-src\extra\nanovg\nanonode">
       <UniqueIdentifier>{9ca55602-f554-40dc-a516-f27d6facc62c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\quick-src\lua_extensions\pomelo">
+      <UniqueIdentifier>{76c3c599-33bf-4bd6-8a3a-e3714cfda441}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h">
@@ -447,6 +450,9 @@
     <ClInclude Include="..\Classes\runtime\FileServer.h">
       <Filter>Classes\runtime</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\lib\quick-src\lua_extensions\pomelo\lua_pomelo.h">
+      <Filter>Classes\quick-src\lua_extensions\pomelo</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
@@ -727,6 +733,9 @@
     </ClCompile>
     <ClCompile Include="..\Classes\runtime\FileServer.cpp">
       <Filter>Classes\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\quick-src\lua_extensions\pomelo\lua_pomelo.c">
+      <Filter>Classes\quick-src\lua_extensions\pomelo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

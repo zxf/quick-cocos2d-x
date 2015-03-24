@@ -1,0 +1,16 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "jansson", "jansson.vcxproj", "{05EB7243-BFC4-9824-DFC9-B26D2B7EEB72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Win32 = Default|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05EB7243-BFC4-9824-DFC9-B26D2B7EEB72}.Default|Win32.ActiveCfg = Default|Win32
+		{05EB7243-BFC4-9824-DFC9-B26D2B7EEB72}.Default|Win32.Build.0 = Default|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

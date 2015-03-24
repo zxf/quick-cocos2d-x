@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "openssl", "openssl.vcxproj", "{59CF354F-652F-950E-79FA-E3A17506A3B6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "openssl-cli", "openssl-cli.vcxproj", "{9CECBE19-0FE2-A82B-06D3-A8E349B8CEDD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{59CF354F-652F-950E-79FA-E3A17506A3B6} = {59CF354F-652F-950E-79FA-E3A17506A3B6}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Win32 = Default|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59CF354F-652F-950E-79FA-E3A17506A3B6}.Default|Win32.ActiveCfg = Default|Win32
+		{59CF354F-652F-950E-79FA-E3A17506A3B6}.Default|Win32.Build.0 = Default|Win32
+		{9CECBE19-0FE2-A82B-06D3-A8E349B8CEDD}.Default|Win32.ActiveCfg = Default|Win32
+		{9CECBE19-0FE2-A82B-06D3-A8E349B8CEDD}.Default|Win32.Build.0 = Default|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
