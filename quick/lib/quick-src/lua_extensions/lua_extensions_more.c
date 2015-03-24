@@ -14,6 +14,9 @@ extern "C" {
 // lpack
 #include "lpack/lpack.h"
 
+// pomelo
+#include "pomelo/lua_pomelo.h"
+
 #ifndef WP8
 
 // filesystem
@@ -27,6 +30,7 @@ static luaL_Reg luax_exts[] = {
     {"cjson", luaopen_cjson_safe},
     {"zlib", luaopen_zlib},
     {"pack", luaopen_pack},
+	{"luapomelo", luaopen_pomelo},
 #ifndef WP8
     {"lfs", luaopen_lfs},
 #endif

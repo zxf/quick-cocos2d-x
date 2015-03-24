@@ -4,19 +4,19 @@
 
 static int lib_init(lua_State* L) {
     int log_level;
-    char* ca_file = NULL;
-    char* ca_path = NULL;
+    const char* ca_file = NULL;
+    const char* ca_path = NULL;
     log_level = luaL_checkinteger(L, 1);
     if(lua_gettop(L) > 0){
         if(lua_isnil(L, 1)){
-            lua_remove(L, 1)
+            lua_remove(L, 1);
         } else {
             ca_file = luaL_checkstring(L, 1);
         }
     }
     if(lua_gettop(L) > 0){
         if(lua_isnil(L, 1)){
-            lua_remove(L, 1)
+            lua_remove(L, 1);
         } else {
             ca_path = luaL_checkstring(L, 1);
         }
@@ -46,27 +46,30 @@ static int ev_to_str(lua_State* L) {
 
 static int rc_to_str(lua_State* L) {
     int rc = luaL_checkinteger(L, 1);
-    lua_pushstring(L, pc_client_rc_str(ev));
+    lua_pushstring(L, pc_client_rc_str(rc));
     return 1;
 }
 
 static int state_to_str(lua_State* L) {
     int state = luaL_checkinteger(L, 1);
-    lua_pushstring(L, pc_client_state_str(ev));
+    lua_pushstring(L, pc_client_state_str(state));
     return 1;
 }
 
 static int create(lua_State* L) {
-    return 1
+    return 1;
 }
 
 static const luaL_reg pomelo_functions[] = {
     {"lib_init",    lib_init},
+	{"lib_cleanup", lib_cleanup},
+	{"ev_to_str", ev_to_str},
+	{"rc_to_str", rc_to_str},
+	{"state_to_str", state_to_str},
     {NULL,  NULL}
 };
 
 int luaopen_pomelo(lua_State* L) {
-
-    luaL_register(L, "pomelo", pomelo_functions);
+    luaL_register(L, "luapomelo", pomelo_functions);
     return 1;
 }
