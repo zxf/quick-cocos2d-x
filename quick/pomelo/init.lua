@@ -1,5 +1,6 @@
 require("luapomelo")
-local pomelo = {
+
+pomelo = {
 	PC_LOCAL_STORAGE_OP_READ = 0,
 	PC_LOCAL_STORAGE_OP_WRITE = 1,
 
@@ -50,7 +51,6 @@ pomelo.ev_to_str = luapomelo.ev_to_str
 pomelo.rc_to_str = luapomelo.rc_to_str
 pomelo.state_to_str = luapomelo.state_to_str
 
-
 pomelo.Client = class("Client")
 
 function pomelo.Client:ctor()
@@ -58,10 +58,6 @@ function pomelo.Client:ctor()
 end
 
 function pomelo.Client:init(use_tls, enable_poll, lc_callback)
-	self._internal_data = luapomelo.create(use_tls, enable_poll, lc_callback)
-	return self._internal_data == nil
+    self._internal_data = luapomelo.create(use_tls, enable_poll, lc_callback);
+    return self._internal_data == nil
 end
-
-
-cc = cc or {}
-cc.pomelo = pomelo
