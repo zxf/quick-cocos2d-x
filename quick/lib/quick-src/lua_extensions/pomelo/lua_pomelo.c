@@ -22,18 +22,22 @@ static int ext_lua_checkbool(lua_State* L, int idx) {
 	}
 }
 
-static lua_State* ext_lua_state(lua_State* L, int idx) {
+static lua_State* ext_lua_func_state(lua_State* L, int idx) {
 	lua_State* lua_st;
-	if(!lua_isfunction(L, idx) || !lua_iscfunction(L, idx)) {
-		luaL_error(L, "type error:not a function");
+	int ref;
+	if(!lua_isfunction(L, idx) && !lua_iscfunction(L, idx)) {
+		luaL_error(L, "type error: %s is not a function.", lua_typename(L, lua_type(L, idx)));
 	} else {
+		lua_pushvalue(L, idx);
+		ref = luaL_ref(L, LUA_REGISTRYINDEX);
 		lua_st = lua_newthread(L);
+		lua_rawgeti(lua_st, LUA_REGISTRYINDEX, ref);
+		luaL_unref(L, LUA_REGISTRYINDEX, ref);
 		lua_pop(L, 1);
-		lua_pushcfunction(lua_st, lua_tocfunction(L, idx));
 	}
+
 	return lua_st;
 }
-
 
 static int ext_lua_reg_state(lua_State* L, void* group, lua_State* LL) {
 	lua_pushlightuserdata(L, group);
@@ -65,52 +69,40 @@ static void default_destructor(void* ex_data) {
 
 static int local_storage_cb(pc_local_storage_op_t op, char* data, size_t* len, void* ex_data) {
 	int ret = -1;
-	int res_len = 0;
     char* res = NULL;
 	const char* error;
-	lua_State* L = ext_lua_state((lua_State*)ex_data, -1);
-
+	lua_State* L = ext_lua_func_state((lua_State*)ex_data, -1);	
 	if (op == PC_LOCAL_STORAGE_OP_WRITE) {
-		lua_pushvalue(L, -1);
 		lua_pushinteger(L, op);
 		lua_pushlstring(L, data, *len);
 		if (lua_pcall(L, 3, 1, 0) != 0) {
 			error = lua_tostring(L, -1);
-			lua_pop(L, 1);
 			luaL_error(L, error);
 		} else if (lua_isnone(L, -1) ) {
-			lua_pop(L, 1);
 			luaL_error(L, "error...");
 		} else {
 			ret = luaL_checklong(L, -1);
-			lua_pop(L, 1);
 		}
 		return ret;
 	} else {
-		lua_pushvalue(L, -1);
 		lua_pushinteger(L, op);
 		if (lua_pcall(L, 1, 1, 0) != 0) {
 			error = lua_tostring(L, -1);
-			lua_pop(L, 1);
 			luaL_error(L, error);
 		} else if (lua_isnone(L, -1)) {
-			lua_pop(L, 1);
 			luaL_error(L, "error...");
 		} else {
 			if (!lua_isnil(L, -1)) {
-				res = (char*)lua_tostring(L, -1);
+				res = (char *)lua_tostring(L, -1);
 			}
-			lua_pop(L, 1);
 		}
 		if (res) {
-            res_len = strlen(res);
-            if (res_len == 0) {
+            *len = strlen(res);
+            if (*len == 0) {
                 return -1;
             }
-			*len = res_len + 1;
-
             if (data) {
-                strcpy(data, res);
+                strncpy(data, res, *len);
             }
             return 0;
         } else {
@@ -197,16 +189,15 @@ static int create(lua_State* L) {
 		return 0;
 	}
 	
-	ls_ex_data = ext_lua_state(L, -2);
+	ls_ex_data = ext_lua_func_state(L, -2);
 	config.local_storage_cb = local_storage_cb;
 	config.ls_ex_data = ls_ex_data;
 	ret = pc_client_init(client, NULL, &config);
     if (ret != PC_RC_OK) {
-		lua_pop(L, 2);
+		lua_pop(L, 1);
         lua_pushnil(L);
 		return 0;
     }
-	lua_pop(L, 1);
 	ext_lua_reg_state(L, client, ls_ex_data);
     return 0;
 }
@@ -241,6 +232,7 @@ static int state(lua_State* L) {
     return 0;
 }
 
+/*
 static int add_ev_handler(lua_State* L) {
     unsigned long addr;
     pc_client_t* client;
@@ -257,6 +249,7 @@ static int add_ev_handler(lua_State* L) {
 	lua_pushinteger(L, ret);
     return 0;
 }
+*/
 
 static const luaL_reg pomelo_functions[] = {
     {"lib_init",    lib_init},
@@ -267,6 +260,7 @@ static const luaL_reg pomelo_functions[] = {
 	{"create", create},
 	{"connect", connect},
 	{"state", state},
+	//{"add_ev_handler", add_ev_handler},
     {NULL,  NULL}
 };
 
