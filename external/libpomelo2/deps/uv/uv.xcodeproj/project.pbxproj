@@ -1,0 +1,1166 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1BF323A2B02F1EC68832C2CB /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EB6C1E4AF282847509C3F777 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				DFCEE91384FB383829C69B0B /* PBXTargetDependency */,
+				6AA312E9C9D767599DC10FA1 /* PBXTargetDependency */,
+				FB6419D8479D06EDB7EAD4F9 /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		018026FFC3EB8167B25962B8 /* dl.c in Sources */ = {isa = PBXBuildFile; fileRef = 2BC84FC9CCCEF95ECCA4E892 /* dl.c */; };
+		06F8A0B44EA37CCCC83566BF /* benchmark-sizes.c in Sources */ = {isa = PBXBuildFile; fileRef = EF8C2717D547EFDA37597CB2 /* benchmark-sizes.c */; };
+		076D352898850DCF21A9A69E /* test-pipe-set-non-blocking.c in Sources */ = {isa = PBXBuildFile; fileRef = 27ACD6F955788DA6404CFD7A /* test-pipe-set-non-blocking.c */; };
+		08BAEB683C324779E732DCD7 /* test-fs.c in Sources */ = {isa = PBXBuildFile; fileRef = EC43658C0E7B3EEEC341967B /* test-fs.c */; };
+		0A5E5CD2F956B1C7D0F96EED /* stream.c in Sources */ = {isa = PBXBuildFile; fileRef = 16FB9E3B8ED8630C181F2567 /* stream.c */; };
+		0C3D241EBDD307F85D563820 /* fsevents.c in Sources */ = {isa = PBXBuildFile; fileRef = 241DD966C4A104726884AB3E /* fsevents.c */; };
+		0FCF82A29347B8DA90A22EB4 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1366FBDA3B41EA03E9CC86CA /* libuv.a */; };
+		10A8C140E2F2ED2F196FA5D9 /* test-embed.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F9C81A962726E4A9A970ECC /* test-embed.c */; };
+		10DA6976693988A635871C61 /* loop.c in Sources */ = {isa = PBXBuildFile; fileRef = 52786454B42E90186DCDED30 /* loop.c */; };
+		1139F4B9D76E6AA0CD8B2385 /* test-tcp-try-write.c in Sources */ = {isa = PBXBuildFile; fileRef = 21CEB4E7A7E0E40FFAA67AC9 /* test-tcp-try-write.c */; };
+		1202C1EB0A101253B6A6C336 /* benchmark-async-pummel.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C5B7938E5573807B173EE9A /* benchmark-async-pummel.c */; };
+		190CDEBAF4DA08BFABDC8A39 /* test-tcp-oob.c in Sources */ = {isa = PBXBuildFile; fileRef = 46D40610F865EA0120DCCADE /* test-tcp-oob.c */; };
+		19F0773320544A23F31A6CA9 /* test-pipe-getsockname.c in Sources */ = {isa = PBXBuildFile; fileRef = EC7AB15B659A670D56F3E16B /* test-pipe-getsockname.c */; };
+		1B0690438F8E164E0DAE662D /* test-mutexes.c in Sources */ = {isa = PBXBuildFile; fileRef = D92DBEDBC6997337583EAFA9 /* test-mutexes.c */; };
+		1C13B3770E63E87F0BF93235 /* test-udp-ipv6.c in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B54C76C44A7ED402E734 /* test-udp-ipv6.c */; };
+		1CFF95DEC3E465EB67D2BB10 /* test-thread-equal.c in Sources */ = {isa = PBXBuildFile; fileRef = A26C180EE30D49BE2B413E7F /* test-thread-equal.c */; };
+		1EFCB25C7171C108A2AD1BBA /* test-osx-select.c in Sources */ = {isa = PBXBuildFile; fileRef = 92E65E4E829DFC6B12328D4E /* test-osx-select.c */; };
+		20172E71895154B43B096782 /* test-tcp-write-queue-order.c in Sources */ = {isa = PBXBuildFile; fileRef = 3536B3FCBBC6BF02FF566F98 /* test-tcp-write-queue-order.c */; };
+		2301A8FA5416CEA6EA72D87B /* test-async-null-cb.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F5DD187928ADB6667F09F88 /* test-async-null-cb.c */; };
+		237D7E81EE01CA9B1714A2B1 /* test-handle-fileno.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B5604D1DBD34A5FDFA57981 /* test-handle-fileno.c */; };
+		25B8321E36F68A45EE057C28 /* test-loop-close.c in Sources */ = {isa = PBXBuildFile; fileRef = F5347A0AEF20A452216DACA2 /* test-loop-close.c */; };
+		260B18088AEA96E9C31E2A55 /* test-udp-open.c in Sources */ = {isa = PBXBuildFile; fileRef = 620073D11E295FE9C2A37CEA /* test-udp-open.c */; };
+		283BD8EC9B99DA2BE366C375 /* proctitle.c in Sources */ = {isa = PBXBuildFile; fileRef = 18C3C1DE5A5FC3AE0E03B2D7 /* proctitle.c */; };
+		28EC9CAC5B5DC4C464E538E3 /* test-fail-always.c in Sources */ = {isa = PBXBuildFile; fileRef = 3C6C0F1C14D7606E450409AB /* test-fail-always.c */; };
+		2AE68E3D17ED1E92AF109D80 /* test-close-fd.c in Sources */ = {isa = PBXBuildFile; fileRef = F06422AD8BB826729E6A5574 /* test-close-fd.c */; };
+		2AE8278DDE915C13FECEFDD9 /* run-tests.c in Sources */ = {isa = PBXBuildFile; fileRef = C9C75784CD22A66F9F04C7B5 /* run-tests.c */; };
+		2B3433A6BEA3528CBCBBFE7E /* benchmark-million-timers.c in Sources */ = {isa = PBXBuildFile; fileRef = 87E6CBAAE987592E6E6D92DF /* benchmark-million-timers.c */; };
+		2B756F1B5F7ECB5A79B8D518 /* echo-server.c in Sources */ = {isa = PBXBuildFile; fileRef = 13A481055CD717DF2541FF08 /* echo-server.c */; };
+		2BBD0FA5F7950C6CC5A56608 /* test-shutdown-close.c in Sources */ = {isa = PBXBuildFile; fileRef = 4A6F0573AC5F1585B4FD64CC /* test-shutdown-close.c */; };
+		2D97A575BC7A5C0485086947 /* test-stdio-over-pipes.c in Sources */ = {isa = PBXBuildFile; fileRef = BC29DD05C9D8E927B20DFA52 /* test-stdio-over-pipes.c */; };
+		2FA0BB4F8AFAA0E3FAFB9553 /* test-threadpool.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E551C652371445F29B89AB7 /* test-threadpool.c */; };
+		312F0655CAC71C5A0EBE69CC /* benchmark-pound.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B579310E33D590B7B2986DD /* benchmark-pound.c */; };
+		32D9DF4C4B21AC1FABE8140D /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1366FBDA3B41EA03E9CC86CA /* libuv.a */; };
+		35AAE5A0250C3A534C8B15F4 /* test-udp-send-unreachable.c in Sources */ = {isa = PBXBuildFile; fileRef = 83D6BBECA2A9EE0DB7299A42 /* test-udp-send-unreachable.c */; };
+		37ABDF5F7B62E7AC4B0745BE /* benchmark-udp-pummel.c in Sources */ = {isa = PBXBuildFile; fileRef = E368BCF1DD85809BEF537A3F /* benchmark-udp-pummel.c */; };
+		38C507E4ECDE8ADAE933C2D7 /* test-tcp-connect-error-after-write.c in Sources */ = {isa = PBXBuildFile; fileRef = 9B265B9316142326C0198456 /* test-tcp-connect-error-after-write.c */; };
+		39E433C5A4F78C0C28882E6C /* test-delayed-accept.c in Sources */ = {isa = PBXBuildFile; fileRef = 2FCBDF1C9514BDE6E5AACC5F /* test-delayed-accept.c */; };
+		3AD8370F96307E9C21321F3C /* test-pipe-sendmsg.c in Sources */ = {isa = PBXBuildFile; fileRef = 49B7F93D0250F6B54AE5CF01 /* test-pipe-sendmsg.c */; };
+		3D80337A8AD4461AA054EC57 /* test-pass-always.c in Sources */ = {isa = PBXBuildFile; fileRef = 364B397F5209268AE3568849 /* test-pass-always.c */; };
+		421B36606B8544040BC05441 /* test-walk-handles.c in Sources */ = {isa = PBXBuildFile; fileRef = F10903B978B991B31FF3B017 /* test-walk-handles.c */; };
+		434713BC29C09B35BD87FE30 /* test-udp-try-send.c in Sources */ = {isa = PBXBuildFile; fileRef = BE8E84F5A2DBE36ABA83AB77 /* test-udp-try-send.c */; };
+		44585BB43002568273C0B328 /* test-udp-multicast-join.c in Sources */ = {isa = PBXBuildFile; fileRef = 753D16CD907AF790F753B558 /* test-udp-multicast-join.c */; };
+		4574A9271FB7106138E5A739 /* test-threadpool-cancel.c in Sources */ = {isa = PBXBuildFile; fileRef = 56557578B6C2CCB8638B8B02 /* test-threadpool-cancel.c */; };
+		457BB886B16B0384963FB511 /* benchmark-async.c in Sources */ = {isa = PBXBuildFile; fileRef = F0CD1F73A009BCBE5A154BCC /* benchmark-async.c */; };
+		45FE77933F7C5AC9D64A9C1A /* test-tcp-close.c in Sources */ = {isa = PBXBuildFile; fileRef = A8597217335FF84165153D4B /* test-tcp-close.c */; };
+		46348B844E09969F41788483 /* test-udp-multicast-join6.c in Sources */ = {isa = PBXBuildFile; fileRef = 528BABAED3E116FEB2ABE66F /* test-udp-multicast-join6.c */; };
+		47016C1261E1CCFB48F075CF /* test-tcp-read-stop.c in Sources */ = {isa = PBXBuildFile; fileRef = A10EBDAE85276BB1DAC6BEC2 /* test-tcp-read-stop.c */; };
+		47E29CEAD3C86EF42CEBB7FD /* loop-watcher.c in Sources */ = {isa = PBXBuildFile; fileRef = BED29F62F7EA09D75179DCB2 /* loop-watcher.c */; };
+		4825525DC0BE4F23DC354762 /* test-default-loop-close.c in Sources */ = {isa = PBXBuildFile; fileRef = 7EC23082E8F928451E8E9FEE /* test-default-loop-close.c */; };
+		489B0D98BB429495C658C718 /* blackhole-server.c in Sources */ = {isa = PBXBuildFile; fileRef = 662B2D2317B6A44E4F973607 /* blackhole-server.c */; };
+		48BFE772CB17AB6555CD3377 /* process.c in Sources */ = {isa = PBXBuildFile; fileRef = CBD7AB980C90721CA1D5F82C /* process.c */; };
+		49CF164FA8FBC9DDF7FDA7C0 /* benchmark-multi-accept.c in Sources */ = {isa = PBXBuildFile; fileRef = 45EB8B2FFCAEB423EBD7802F /* benchmark-multi-accept.c */; };
+		4A971CF7FFDD31CBA299D720 /* echo-server.c in Sources */ = {isa = PBXBuildFile; fileRef = 13A481055CD717DF2541FF08 /* echo-server.c */; };
+		4AB606C86D208C7484382AAF /* test-udp-send-immediate.c in Sources */ = {isa = PBXBuildFile; fileRef = 53743920969AD5942F8C47C0 /* test-udp-send-immediate.c */; };
+		4D00D296632ABFA9BE61AD55 /* test-poll-closesocket.c in Sources */ = {isa = PBXBuildFile; fileRef = F8A674950A4175FC3627F8EF /* test-poll-closesocket.c */; };
+		505551DBEE566E53E7A000B4 /* test-condvar.c in Sources */ = {isa = PBXBuildFile; fileRef = B0708FEC17D43F3E8C955C3C /* test-condvar.c */; };
+		52EB56A7A23C74FAF803F8CB /* benchmark-fs-stat.c in Sources */ = {isa = PBXBuildFile; fileRef = C9438BC085BFB10797057568 /* benchmark-fs-stat.c */; };
+		53A6D30BC500261328436A17 /* test-tcp-writealot.c in Sources */ = {isa = PBXBuildFile; fileRef = AE4D2060456EF8924D630BF5 /* test-tcp-writealot.c */; };
+		542F81719825A6A8114AFDFA /* test-pipe-connect-error.c in Sources */ = {isa = PBXBuildFile; fileRef = 94A00AA5A32C69299238B9FB /* test-pipe-connect-error.c */; };
+		54B449CE11D6E0A286AC6733 /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 74F0F674CFBF30A1336F6106 /* thread.c */; };
+		5671F403D73F34CE0687BF17 /* test-shutdown-twice.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C1445428337CBE45F7C04F3 /* test-shutdown-twice.c */; };
+		572CF22482D9BB31A41C92CF /* test-ipc.c in Sources */ = {isa = PBXBuildFile; fileRef = D6DAE8C2782A52106270890A /* test-ipc.c */; };
+		58E3DB664205B469191E6972 /* test-timer.c in Sources */ = {isa = PBXBuildFile; fileRef = B22DD3075F8496F6CCB30FF4 /* test-timer.c */; };
+		5C8282A317078087C4E66123 /* test-loop-time.c in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DA76D9A94B1AAF8714821 /* test-loop-time.c */; };
+		603C114C01C899B84AF6BFE8 /* test-tty.c in Sources */ = {isa = PBXBuildFile; fileRef = C0D8DB4019A65E9B53025FE6 /* test-tty.c */; };
+		6241F1079E1A9A7AF262F088 /* test-watcher-cross-stop.c in Sources */ = {isa = PBXBuildFile; fileRef = AD42F3CCDCFBAD05F8AC243F /* test-watcher-cross-stop.c */; };
+		650BAAEBA5D976A422CD07DB /* benchmark-spawn.c in Sources */ = {isa = PBXBuildFile; fileRef = A9675BCCFA028E67B099FAD9 /* benchmark-spawn.c */; };
+		651FA33D8D9246E832E77769 /* udp.c in Sources */ = {isa = PBXBuildFile; fileRef = BD566A6717132B083504D61D /* udp.c */; };
+		6536A3F55BB016CF70CA15C3 /* benchmark-getaddrinfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 71A3FF0C938F91ED2A7D18A4 /* benchmark-getaddrinfo.c */; };
+		65EE158E43546415D3AF1658 /* test-idle.c in Sources */ = {isa = PBXBuildFile; fileRef = C6C0358734B0B1F9B852FD94 /* test-idle.c */; };
+		663983D3F9DF9D7F094663B1 /* test-fs-poll.c in Sources */ = {isa = PBXBuildFile; fileRef = FF6D88115DA2D561A23C3983 /* test-fs-poll.c */; };
+		67B1062ECB9145AE04E32099 /* test-tcp-close-while-connecting.c in Sources */ = {isa = PBXBuildFile; fileRef = AB5162813A86658ED3C35DE7 /* test-tcp-close-while-connecting.c */; };
+		693C8925024FD22459E10FC0 /* run-benchmarks.c in Sources */ = {isa = PBXBuildFile; fileRef = D46A15BA83C3F90AC2DD2DD7 /* run-benchmarks.c */; };
+		6DC9A0B54AA52FADDC180DBC /* test-cwd-and-chdir.c in Sources */ = {isa = PBXBuildFile; fileRef = 510D28C6CBBAA70DAA6B8D5B /* test-cwd-and-chdir.c */; };
+		754F8C6202564910CA108B6E /* test-udp-bind.c in Sources */ = {isa = PBXBuildFile; fileRef = A03696FA99CF2374C856CF34 /* test-udp-bind.c */; };
+		766E04F4851D17C38A3485D9 /* test-pipe-server-close.c in Sources */ = {isa = PBXBuildFile; fileRef = 4833BB821B0861464DD5931B /* test-pipe-server-close.c */; };
+		76E2CCD79B7F486722D1CDF3 /* uv-common.c in Sources */ = {isa = PBXBuildFile; fileRef = 1743CFEBD471F9E247E53C9C /* uv-common.c */; };
+		78CDB78543219EE51406B90D /* test-tcp-connect6-error.c in Sources */ = {isa = PBXBuildFile; fileRef = AD66A8CB1CEC48AD0FFF2F9F /* test-tcp-connect6-error.c */; };
+		7D79680812B6F4AF243EE55F /* test-ip6-addr.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3FF067A0D9D621D20B070 /* test-ip6-addr.c */; };
+		8023C8194E70665CA590DA35 /* test-signal-multiple-loops.c in Sources */ = {isa = PBXBuildFile; fileRef = C71EC85F047F99FE208C1F0D /* test-signal-multiple-loops.c */; };
+		818FFABBBB88AF505C5A2871 /* test-get-loadavg.c in Sources */ = {isa = PBXBuildFile; fileRef = 25C0E15B19C98D21BBF14E96 /* test-get-loadavg.c */; };
+		82180B27F41BA83017B8CBEE /* benchmark-million-async.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B9678FEDDD905E7E042A429 /* benchmark-million-async.c */; };
+		83AC1183DBA58E62A5CC6AEF /* tty.c in Sources */ = {isa = PBXBuildFile; fileRef = 76276F38C6E3CB81D6B9D005 /* tty.c */; };
+		83F758F012425F23A073BB87 /* test-ipc-send-recv.c in Sources */ = {isa = PBXBuildFile; fileRef = 0610F0CB80462AA5B4062F9B /* test-ipc-send-recv.c */; };
+		842E40FBD738703F1F556EF9 /* test-spawn.c in Sources */ = {isa = PBXBuildFile; fileRef = BE99830220F54369574D85E4 /* test-spawn.c */; };
+		84B0BC4763558DCAE8FE8EE5 /* tcp.c in Sources */ = {isa = PBXBuildFile; fileRef = 006788E3A1BCDB01D5AFA26D /* tcp.c */; };
+		84C36805A86B9254BC79BA3A /* darwin-proctitle.c in Sources */ = {isa = PBXBuildFile; fileRef = 517FF12C5A6AC0AADF373C45 /* darwin-proctitle.c */; };
+		89EFC748A5B6A431A761F86E /* test-poll-close-doesnt-corrupt-stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 395901B57C62B2593733939E /* test-poll-close-doesnt-corrupt-stack.c */; };
+		8A189CFD8D1F87EE268F95FC /* runner.c in Sources */ = {isa = PBXBuildFile; fileRef = 40E9BEDAF8EE8374DF7FB743 /* runner.c */; };
+		8D419554E3B9E25E6785C059 /* test-get-memory.c in Sources */ = {isa = PBXBuildFile; fileRef = AE5B26B1B281FE8E387DFF3B /* test-get-memory.c */; };
+		8DF0EA75CC818D455599B0E5 /* kqueue.c in Sources */ = {isa = PBXBuildFile; fileRef = D5DBA64661E3E3823FF0B65B /* kqueue.c */; };
+		91DDC7E0397EBFB3D1F09E12 /* test-signal.c in Sources */ = {isa = PBXBuildFile; fileRef = AA6B994642205C21E60C743E /* test-signal.c */; };
+		93F64B6E315ADCC7E8CAB540 /* timer.c in Sources */ = {isa = PBXBuildFile; fileRef = 32389543F04A65EF40964A95 /* timer.c */; };
+		9415FDC588192714FBA4F19D /* test-error.c in Sources */ = {isa = PBXBuildFile; fileRef = F421F5C124F677089D975332 /* test-error.c */; };
+		949DCA86744CB2857C0C58FA /* darwin.c in Sources */ = {isa = PBXBuildFile; fileRef = 57210460BBB5FD25100F471D /* darwin.c */; };
+		94BEA3E69962509E94DBB8D6 /* test-tcp-flags.c in Sources */ = {isa = PBXBuildFile; fileRef = A3F3A4F2D17FD2A483AF51FA /* test-tcp-flags.c */; };
+		9897070398F4C4B588F32495 /* test-loop-stop.c in Sources */ = {isa = PBXBuildFile; fileRef = D92F58BC7E8AA50F48943FA9 /* test-loop-stop.c */; };
+		995258038C845FF479ED16BE /* blackhole-server.c in Sources */ = {isa = PBXBuildFile; fileRef = 662B2D2317B6A44E4F973607 /* blackhole-server.c */; };
+		9A3B608F5A5AF2E1055D3ED9 /* test-tcp-unexpected-read.c in Sources */ = {isa = PBXBuildFile; fileRef = D76CFDEC5CCCB2F04CE35957 /* test-tcp-unexpected-read.c */; };
+		9A7FD2922FB70F0A515079BD /* runner.c in Sources */ = {isa = PBXBuildFile; fileRef = 40E9BEDAF8EE8374DF7FB743 /* runner.c */; };
+		9B0876F23C23B6ABD9137EFC /* fs.c in Sources */ = {isa = PBXBuildFile; fileRef = 3E221E3487C83972954FE3F4 /* fs.c */; };
+		9C347A27FE7B0084C96D4CE7 /* getaddrinfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 55DADA8B912C46174791CBC8 /* getaddrinfo.c */; };
+		9EF465968C2FD000071F5EEE /* test-ip4-addr.c in Sources */ = {isa = PBXBuildFile; fileRef = F14E652AA41D129869B3DE4A /* test-ip4-addr.c */; };
+		9FFBD2835D9835A5239A250D /* runner-unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 7643716417C711503BFD09A3 /* runner-unix.c */; };
+		A03743468D01132B0EA32CA1 /* async.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E758132FDE9BA65B4A096D4 /* async.c */; };
+		A24AC161CFC0FFA72ED385E9 /* test-emfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 7A5D75A691063FB193F49581 /* test-emfile.c */; };
+		A29DA542CF363EE72A740435 /* dns-server.c in Sources */ = {isa = PBXBuildFile; fileRef = 7BE3C2C2E8F3FA98411914C0 /* dns-server.c */; };
+		A6CD3366D4E10DE67AB41A63 /* test-udp-multicast-ttl.c in Sources */ = {isa = PBXBuildFile; fileRef = D8284066040C7BF32BECF7D8 /* test-udp-multicast-ttl.c */; };
+		A72F576DF7313E075C90978D /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = 9764EB1AF01FEE7410B386B7 /* version.c */; };
+		A740B458760018C8B44109AE /* threadpool.c in Sources */ = {isa = PBXBuildFile; fileRef = 864476C468B50352BC52D3A3 /* threadpool.c */; };
+		A813620B7E1A323D164BC394 /* test-multiple-listen.c in Sources */ = {isa = PBXBuildFile; fileRef = 25A2B2B952E30889A1473E1D /* test-multiple-listen.c */; };
+		A96165C393B7EBB8CF8C8FBF /* test-tcp-write-after-connect.c in Sources */ = {isa = PBXBuildFile; fileRef = 68594A18E2DCC38B2C7B8994 /* test-tcp-write-after-connect.c */; };
+		AA4B0123D7C553822EEAAA2F /* -lm in Frameworks */ = {isa = PBXBuildFile; fileRef = 318EA9866DFFC64ACAC4F152 /* -lm */; };
+		AC50DCA9CACEDC4102C0C23C /* test-udp-dgram-too-big.c in Sources */ = {isa = PBXBuildFile; fileRef = 3188617F19884B6515B431D3 /* test-udp-dgram-too-big.c */; };
+		ADB63E6A516A78E72B113080 /* test-thread.c in Sources */ = {isa = PBXBuildFile; fileRef = F352721F73E72394A3FE9461 /* test-thread.c */; };
+		B3B878F36659C7A5939A93F8 /* test-shutdown-eof.c in Sources */ = {isa = PBXBuildFile; fileRef = CBDF89446097E83456C90765 /* test-shutdown-eof.c */; };
+		B512E0C4305AB19C78598A0A /* test-close-order.c in Sources */ = {isa = PBXBuildFile; fileRef = BD5E74D310D653A066452658 /* test-close-order.c */; };
+		B6A18EBBBBDAFFA3FB0026B0 /* benchmark-tcp-write-batch.c in Sources */ = {isa = PBXBuildFile; fileRef = C1B02795E043A2AEAD2C9F33 /* benchmark-tcp-write-batch.c */; };
+		B6A565813FC87325DDC14502 /* test-barrier.c in Sources */ = {isa = PBXBuildFile; fileRef = 280831C5E7E115B84C341EC2 /* test-barrier.c */; };
+		B724B9B5FFEA3B0442351544 /* test-tcp-connect-error.c in Sources */ = {isa = PBXBuildFile; fileRef = 53DEF1C9AD211DAE223A543B /* test-tcp-connect-error.c */; };
+		B81FC3361AD6F12C065B6A86 /* test-tcp-bind-error.c in Sources */ = {isa = PBXBuildFile; fileRef = 9844B804CF9FD3F84901E31F /* test-tcp-bind-error.c */; };
+		B9FB8648C9E10B46F4AB4BAA /* test-timer-again.c in Sources */ = {isa = PBXBuildFile; fileRef = FB9BD151BFC6BA6B11502F14 /* test-timer-again.c */; };
+		BA2EEBFA115A7058E26B14A1 /* test-active.c in Sources */ = {isa = PBXBuildFile; fileRef = A3811BFCF2926F88A89337BB /* test-active.c */; };
+		BA387FA9D85B12FDF29C9ECF /* fs-poll.c in Sources */ = {isa = PBXBuildFile; fileRef = 275071A6DFDDD433F83BD38C /* fs-poll.c */; };
+		BA6987F43D5B88D0D3CA1FB7 /* test-tcp-open.c in Sources */ = {isa = PBXBuildFile; fileRef = B2A5682EB1EBDB63A5A4FF68 /* test-tcp-open.c */; };
+		BCB5D2C3930FD2006E356E42 /* test-poll.c in Sources */ = {isa = PBXBuildFile; fileRef = CB8103F2E2700E5FEBF27904 /* test-poll.c */; };
+		BD0D22583FC16B7D58785566 /* test-platform-output.c in Sources */ = {isa = PBXBuildFile; fileRef = E693261F971F3A54AC55C056 /* test-platform-output.c */; };
+		BFB52268BE206BD1F9A96C5D /* test-tcp-shutdown-after-write.c in Sources */ = {isa = PBXBuildFile; fileRef = 80161391BFD0E1727CC6E837 /* test-tcp-shutdown-after-write.c */; };
+		C005E0D4101F3952950F6720 /* test-callback-order.c in Sources */ = {isa = PBXBuildFile; fileRef = D35EF8AE3F1599379B059C21 /* test-callback-order.c */; };
+		C0674D02FE3F680762121CA4 /* runner-unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 7643716417C711503BFD09A3 /* runner-unix.c */; };
+		C1EB08B6577E46570D9AA056 /* -lm in Frameworks */ = {isa = PBXBuildFile; fileRef = 318EA9866DFFC64ACAC4F152 /* -lm */; };
+		C2E147688B2BE2F6CC1192E1 /* test-socket-buffer-size.c in Sources */ = {isa = PBXBuildFile; fileRef = B08C62A77EEF9BD15C8E8E21 /* test-socket-buffer-size.c */; };
+		C3CB9236BFF71CD9CD214ACC /* test-loop-configure.c in Sources */ = {isa = PBXBuildFile; fileRef = 17294BC3AD3DCDC3E80D461D /* test-loop-configure.c */; };
+		C67DEE35852986D5C5D6878F /* test-ref.c in Sources */ = {isa = PBXBuildFile; fileRef = 510468EABB26161A1D2D22BD /* test-ref.c */; };
+		C73F48C9F6F59023DC1C5C93 /* test-run-once.c in Sources */ = {isa = PBXBuildFile; fileRef = E822CE24A76F2A8ABCB6EED8 /* test-run-once.c */; };
+		C8DBCCD7F663E23D90227347 /* benchmark-ping-pongs.c in Sources */ = {isa = PBXBuildFile; fileRef = 08B4926132CCE7E662372FE0 /* benchmark-ping-pongs.c */; };
+		CF1CA521E011061B5B0F1EFE /* test-loop-handles.c in Sources */ = {isa = PBXBuildFile; fileRef = CB406F622239E7FAAAB8EAE2 /* test-loop-handles.c */; };
+		CF1E51C7E7EBEB1DF015F568 /* signal.c in Sources */ = {isa = PBXBuildFile; fileRef = ACF4D2EA3CDC0D3720CC6652 /* signal.c */; };
+		CF526B0DC5272DDCC56CA208 /* test-udp-multicast-interface.c in Sources */ = {isa = PBXBuildFile; fileRef = 712B9514649835AA8BB05623 /* test-udp-multicast-interface.c */; };
+		D05EFA54C267B028D3B10F5F /* test-pipe-close-stdout-read-stdin.c in Sources */ = {isa = PBXBuildFile; fileRef = 64C644A422047C69C844F732 /* test-pipe-close-stdout-read-stdin.c */; };
+		D2EA9EFE91CD1314FC15EE28 /* test-udp-multicast-interface6.c in Sources */ = {isa = PBXBuildFile; fileRef = CC44B006CDC6EFB4961A5F4F /* test-udp-multicast-interface6.c */; };
+		D3BE05E3FB32F63CC73BB942 /* test-udp-options.c in Sources */ = {isa = PBXBuildFile; fileRef = E1F38034811CC5EE9AD2B423 /* test-udp-options.c */; };
+		D49CED3BB40CA8F67303C583 /* test-tcp-connect-timeout.c in Sources */ = {isa = PBXBuildFile; fileRef = 70A0058B0DBA0A5023BA6FF8 /* test-tcp-connect-timeout.c */; };
+		D791B8B562E4C79D2135F089 /* getnameinfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 829B274662468FF818DE670A /* getnameinfo.c */; };
+		D7DE58AD9096A1BAEA545900 /* test-tcp-close-accept.c in Sources */ = {isa = PBXBuildFile; fileRef = CF662168075D9D5B94C51DB0 /* test-tcp-close-accept.c */; };
+		D7E433555BD782DF6C129ED0 /* test-process-title.c in Sources */ = {isa = PBXBuildFile; fileRef = 3CB9B0B07A7DA38C302B48B6 /* test-process-title.c */; };
+		D901414EB90C9C2D7935B534 /* pipe.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D4D4F766CFD4876472B6BC7 /* pipe.c */; };
+		DBA80FA0233D7CA7417D74B0 /* benchmark-loop-count.c in Sources */ = {isa = PBXBuildFile; fileRef = C353118A0EDAD5BCC72C5FE9 /* benchmark-loop-count.c */; };
+		DBB7A645F716845A451E7E19 /* poll.c in Sources */ = {isa = PBXBuildFile; fileRef = BDD22039B6923DFA419D3E31 /* poll.c */; };
+		DC3E8C557934621070E18F7F /* test-fs-event.c in Sources */ = {isa = PBXBuildFile; fileRef = 66D63C076D568F1435ED3BA7 /* test-fs-event.c */; };
+		DD33D1CB95C1BBAD952A7EFB /* benchmark-pump.c in Sources */ = {isa = PBXBuildFile; fileRef = 60229CE02A7CA975502B2552 /* benchmark-pump.c */; };
+		DE2781FCE199F31E48E8AA85 /* test-loop-alive.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F961B6A5A3F591D890497CE /* test-loop-alive.c */; };
+		E01468E98690284BCE2C4EF6 /* test-dlerror.c in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA5C670D8AD48D37984209 /* test-dlerror.c */; };
+		E08029A4FCCE598C95958A62 /* test-ping-pong.c in Sources */ = {isa = PBXBuildFile; fileRef = 03D9E038B87B5924BB8CE155 /* test-ping-pong.c */; };
+		E0FD5AED7D4D2DFDC14E544A /* test-get-currentexe.c in Sources */ = {isa = PBXBuildFile; fileRef = F2EC593AFD68A9BF413FC922 /* test-get-currentexe.c */; };
+		E4CA3BF7EDE2E966DFF73577 /* test-udp-send-and-recv.c in Sources */ = {isa = PBXBuildFile; fileRef = A373F4CCC990B3E443A17858 /* test-udp-send-and-recv.c */; };
+		E77EF05ABD7548024F7E4096 /* test-poll-close.c in Sources */ = {isa = PBXBuildFile; fileRef = DBF9320C8747AC249A48252B /* test-poll-close.c */; };
+		E99AB1BC3EA0CD077E1AD9C9 /* benchmark-thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AEDC356AC91C38ACEFE41F6 /* benchmark-thread.c */; };
+		EC7A6F3BE572FC0FE81A9754 /* test-semaphore.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A85D4B35FA78E4673FDD2E8 /* test-semaphore.c */; };
+		EEDF7256D374A3B7BE3ED1A5 /* test-connection-fail.c in Sources */ = {isa = PBXBuildFile; fileRef = E15E9A50BC6B315A09BE15AC /* test-connection-fail.c */; };
+		F0EAF51F7B02FCB4CB193737 /* test-getnameinfo.c in Sources */ = {isa = PBXBuildFile; fileRef = CDC77C6FE2E92DC29985355B /* test-getnameinfo.c */; };
+		F115CCB8FEE96FE451EA7E4D /* test-tcp-write-to-half-open-connection.c in Sources */ = {isa = PBXBuildFile; fileRef = 316AD7C948F5B2930EB33AD2 /* test-tcp-write-to-half-open-connection.c */; };
+		F12503EB5B91B22BAAEAFA2D /* test-hrtime.c in Sources */ = {isa = PBXBuildFile; fileRef = 2506BBD8F8CF2CDF3156BD50 /* test-hrtime.c */; };
+		F1793EE633B19218ACEA822A /* test-tcp-bind6-error.c in Sources */ = {isa = PBXBuildFile; fileRef = 21F44E6CE90F411154093C0A /* test-tcp-bind6-error.c */; };
+		F6C90AF52EFA1594980AD636 /* test-getsockname.c in Sources */ = {isa = PBXBuildFile; fileRef = ED9B014AF7582AA76DB79DB1 /* test-getsockname.c */; };
+		F6DE2B17E2B8CFB91050880B /* inet.c in Sources */ = {isa = PBXBuildFile; fileRef = 0EC6247DFE08AEF6EBA979B4 /* inet.c */; };
+		F7FEF6472B6C05B38C76FECB /* test-pipe-bind-error.c in Sources */ = {isa = PBXBuildFile; fileRef = D802F084D22996AAB91E635A /* test-pipe-bind-error.c */; };
+		F8B2FB24DD10199ED280C221 /* core.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C66F1246EAC664C01670583 /* core.c */; };
+		FE7836EB79367A335292035B /* test-timer-from-check.c in Sources */ = {isa = PBXBuildFile; fileRef = 7D6D09E1F9DB830837B62C50 /* test-timer-from-check.c */; };
+		FE8747C72C8D07F6FC91D7DE /* test-async.c in Sources */ = {isa = PBXBuildFile; fileRef = 09E1C49826F829FC6D2C4C32 /* test-async.c */; };
+		FF8A786090BC28BD046B045A /* test-callback-stack.c in Sources */ = {isa = PBXBuildFile; fileRef = DBDA1EFD678C245D220F1B03 /* test-callback-stack.c */; };
+		FFB2FC268CB346B7D38911B9 /* test-run-nowait.c in Sources */ = {isa = PBXBuildFile; fileRef = 3AB5075313B1DD32C65F7CF4 /* test-run-nowait.c */; };
+		FFF27EF338BBF932C39572C1 /* test-getaddrinfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 6DA61F76AB0AADB4595DA36C /* test-getaddrinfo.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04ED21EC7D0F0261F5BB9400 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36EC565658762C7175600AFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 178071661CB321BB5A46AC92;
+			remoteInfo = libuv;
+		};
+		4537704A156CA7358FD6D434 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36EC565658762C7175600AFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A481575742DC2CA77987CD55;
+			remoteInfo = "run-benchmarks";
+		};
+		53F005A90DE5A64FA96A61FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36EC565658762C7175600AFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 178071661CB321BB5A46AC92;
+			remoteInfo = libuv;
+		};
+		7B5C0D3558609EFA7885929F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36EC565658762C7175600AFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 178071661CB321BB5A46AC92;
+			remoteInfo = libuv;
+		};
+		D14F3AB9F03F2BAE17DCC696 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36EC565658762C7175600AFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9233647E13A9525F991A21E;
+			remoteInfo = "run-tests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		006788E3A1BCDB01D5AFA26D /* tcp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tcp.c; sourceTree = "<group>"; };
+		03D9E038B87B5924BB8CE155 /* test-ping-pong.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-ping-pong.c"; sourceTree = "<group>"; };
+		0610F0CB80462AA5B4062F9B /* test-ipc-send-recv.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-ipc-send-recv.c"; sourceTree = "<group>"; };
+		06164444BD9491650B2F269F /* uv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = uv.h; sourceTree = "<group>"; };
+		08B4926132CCE7E662372FE0 /* benchmark-ping-pongs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-ping-pongs.c"; sourceTree = "<group>"; };
+		09E1C49826F829FC6D2C4C32 /* test-async.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-async.c"; sourceTree = "<group>"; };
+		0B9678FEDDD905E7E042A429 /* benchmark-million-async.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-million-async.c"; sourceTree = "<group>"; };
+		0DE3FF067A0D9D621D20B070 /* test-ip6-addr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-ip6-addr.c"; sourceTree = "<group>"; };
+		0EC6247DFE08AEF6EBA979B4 /* inet.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = inet.c; sourceTree = "<group>"; };
+		0F9AD78A28D4AB83078B4C46 /* run-benchmarks */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "run-benchmarks"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1090AB4394C6592B39BEF8F1 /* runner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = runner.h; sourceTree = "<group>"; };
+		1366FBDA3B41EA03E9CC86CA /* libuv.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuv.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		13A481055CD717DF2541FF08 /* echo-server.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "echo-server.c"; sourceTree = "<group>"; };
+		16FB9E3B8ED8630C181F2567 /* stream.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stream.c; sourceTree = "<group>"; };
+		17294BC3AD3DCDC3E80D461D /* test-loop-configure.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-loop-configure.c"; sourceTree = "<group>"; };
+		1743CFEBD471F9E247E53C9C /* uv-common.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "uv-common.c"; sourceTree = "<group>"; };
+		18C3C1DE5A5FC3AE0E03B2D7 /* proctitle.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = proctitle.c; sourceTree = "<group>"; };
+		1AEDC356AC91C38ACEFE41F6 /* benchmark-thread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-thread.c"; sourceTree = "<group>"; };
+		1E84D000CDC728FA50E13F9F /* uv-version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uv-version.h"; sourceTree = "<group>"; };
+		216622BFD37947A32980CE52 /* internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = internal.h; sourceTree = "<group>"; };
+		21CEB4E7A7E0E40FFAA67AC9 /* test-tcp-try-write.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-try-write.c"; sourceTree = "<group>"; };
+		21F44E6CE90F411154093C0A /* test-tcp-bind6-error.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-bind6-error.c"; sourceTree = "<group>"; };
+		241DD966C4A104726884AB3E /* fsevents.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fsevents.c; sourceTree = "<group>"; };
+		2506BBD8F8CF2CDF3156BD50 /* test-hrtime.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-hrtime.c"; sourceTree = "<group>"; };
+		25A2B2B952E30889A1473E1D /* test-multiple-listen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-multiple-listen.c"; sourceTree = "<group>"; };
+		25C0E15B19C98D21BBF14E96 /* test-get-loadavg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-get-loadavg.c"; sourceTree = "<group>"; };
+		275071A6DFDDD433F83BD38C /* fs-poll.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "fs-poll.c"; sourceTree = "<group>"; };
+		27ACD6F955788DA6404CFD7A /* test-pipe-set-non-blocking.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-pipe-set-non-blocking.c"; sourceTree = "<group>"; };
+		280831C5E7E115B84C341EC2 /* test-barrier.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-barrier.c"; sourceTree = "<group>"; };
+		29C1ACAEBB117D9E1322949A /* uv-sunos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uv-sunos.h"; sourceTree = "<group>"; };
+		2BC84FC9CCCEF95ECCA4E892 /* dl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = dl.c; sourceTree = "<group>"; };
+		2C1445428337CBE45F7C04F3 /* test-shutdown-twice.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-shutdown-twice.c"; sourceTree = "<group>"; };
+		2FCBDF1C9514BDE6E5AACC5F /* test-delayed-accept.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-delayed-accept.c"; sourceTree = "<group>"; };
+		316AD7C948F5B2930EB33AD2 /* test-tcp-write-to-half-open-connection.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-write-to-half-open-connection.c"; sourceTree = "<group>"; };
+		3188617F19884B6515B431D3 /* test-udp-dgram-too-big.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-dgram-too-big.c"; sourceTree = "<group>"; };
+		318EA9866DFFC64ACAC4F152 /* -lm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "-lm"; sourceTree = "<group>"; };
+		32389543F04A65EF40964A95 /* timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = timer.c; sourceTree = "<group>"; };
+		3536B3FCBBC6BF02FF566F98 /* test-tcp-write-queue-order.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-write-queue-order.c"; sourceTree = "<group>"; };
+		364B397F5209268AE3568849 /* test-pass-always.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-pass-always.c"; sourceTree = "<group>"; };
+		395901B57C62B2593733939E /* test-poll-close-doesnt-corrupt-stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-poll-close-doesnt-corrupt-stack.c"; sourceTree = "<group>"; };
+		3AB5075313B1DD32C65F7CF4 /* test-run-nowait.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-run-nowait.c"; sourceTree = "<group>"; };
+		3B5604D1DBD34A5FDFA57981 /* test-handle-fileno.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-handle-fileno.c"; sourceTree = "<group>"; };
+		3C5B7938E5573807B173EE9A /* benchmark-async-pummel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-async-pummel.c"; sourceTree = "<group>"; };
+		3C6C0F1C14D7606E450409AB /* test-fail-always.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-fail-always.c"; sourceTree = "<group>"; };
+		3CB9B0B07A7DA38C302B48B6 /* test-process-title.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-process-title.c"; sourceTree = "<group>"; };
+		3DC7B54C76C44A7ED402E734 /* test-udp-ipv6.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-ipv6.c"; sourceTree = "<group>"; };
+		3E221E3487C83972954FE3F4 /* fs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fs.c; sourceTree = "<group>"; };
+		3F5DD187928ADB6667F09F88 /* test-async-null-cb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-async-null-cb.c"; sourceTree = "<group>"; };
+		3F961B6A5A3F591D890497CE /* test-loop-alive.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-loop-alive.c"; sourceTree = "<group>"; };
+		40E9BEDAF8EE8374DF7FB743 /* runner.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = runner.c; sourceTree = "<group>"; };
+		45EB8B2FFCAEB423EBD7802F /* benchmark-multi-accept.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-multi-accept.c"; sourceTree = "<group>"; };
+		46D40610F865EA0120DCCADE /* test-tcp-oob.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-oob.c"; sourceTree = "<group>"; };
+		4833BB821B0861464DD5931B /* test-pipe-server-close.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-pipe-server-close.c"; sourceTree = "<group>"; };
+		49B7F93D0250F6B54AE5CF01 /* test-pipe-sendmsg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-pipe-sendmsg.c"; sourceTree = "<group>"; };
+		4A6F0573AC5F1585B4FD64CC /* test-shutdown-close.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-shutdown-close.c"; sourceTree = "<group>"; };
+		4ABBB4CF36A1637698DC44FF /* uv-errno.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uv-errno.h"; sourceTree = "<group>"; };
+		510468EABB26161A1D2D22BD /* test-ref.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-ref.c"; sourceTree = "<group>"; };
+		510D28C6CBBAA70DAA6B8D5B /* test-cwd-and-chdir.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-cwd-and-chdir.c"; sourceTree = "<group>"; };
+		517FF12C5A6AC0AADF373C45 /* darwin-proctitle.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "darwin-proctitle.c"; sourceTree = "<group>"; };
+		52786454B42E90186DCDED30 /* loop.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = loop.c; sourceTree = "<group>"; };
+		528BABAED3E116FEB2ABE66F /* test-udp-multicast-join6.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-multicast-join6.c"; sourceTree = "<group>"; };
+		53743920969AD5942F8C47C0 /* test-udp-send-immediate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-send-immediate.c"; sourceTree = "<group>"; };
+		53DEF1C9AD211DAE223A543B /* test-tcp-connect-error.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-connect-error.c"; sourceTree = "<group>"; };
+		55DADA8B912C46174791CBC8 /* getaddrinfo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = getaddrinfo.c; sourceTree = "<group>"; };
+		56557578B6C2CCB8638B8B02 /* test-threadpool-cancel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-threadpool-cancel.c"; sourceTree = "<group>"; };
+		57210460BBB5FD25100F471D /* darwin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = darwin.c; sourceTree = "<group>"; };
+		57DE6015068DF11062A0843F /* test-list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-list.h"; sourceTree = "<group>"; };
+		5CA87C31857A5C8F3368B21D /* task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = task.h; sourceTree = "<group>"; };
+		60229CE02A7CA975502B2552 /* benchmark-pump.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-pump.c"; sourceTree = "<group>"; };
+		607A344614B870FBA1D1B528 /* uv-bsd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uv-bsd.h"; sourceTree = "<group>"; };
+		620073D11E295FE9C2A37CEA /* test-udp-open.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-open.c"; sourceTree = "<group>"; };
+		63688E4796C75785EC5DA9BC /* atomic-ops.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "atomic-ops.h"; sourceTree = "<group>"; };
+		64757BCA7335FEFCED9A25EC /* run-tests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "run-tests"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64C644A422047C69C844F732 /* test-pipe-close-stdout-read-stdin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-pipe-close-stdout-read-stdin.c"; sourceTree = "<group>"; };
+		662B2D2317B6A44E4F973607 /* blackhole-server.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "blackhole-server.c"; sourceTree = "<group>"; };
+		66D63C076D568F1435ED3BA7 /* test-fs-event.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-fs-event.c"; sourceTree = "<group>"; };
+		68594A18E2DCC38B2C7B8994 /* test-tcp-write-after-connect.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-write-after-connect.c"; sourceTree = "<group>"; };
+		698430D69C4B1AB970EBD864 /* common.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = common.gypi; sourceTree = "<group>"; };
+		6A8DA76D9A94B1AAF8714821 /* test-loop-time.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-loop-time.c"; sourceTree = "<group>"; };
+		6DA61F76AB0AADB4595DA36C /* test-getaddrinfo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-getaddrinfo.c"; sourceTree = "<group>"; };
+		6F9C81A962726E4A9A970ECC /* test-embed.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-embed.c"; sourceTree = "<group>"; };
+		70A0058B0DBA0A5023BA6FF8 /* test-tcp-connect-timeout.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-connect-timeout.c"; sourceTree = "<group>"; };
+		711BCB828F6A9DF68CA2C3E8 /* uv-darwin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uv-darwin.h"; sourceTree = "<group>"; };
+		712B9514649835AA8BB05623 /* test-udp-multicast-interface.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-multicast-interface.c"; sourceTree = "<group>"; };
+		71A3FF0C938F91ED2A7D18A4 /* benchmark-getaddrinfo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-getaddrinfo.c"; sourceTree = "<group>"; };
+		74F0F674CFBF30A1336F6106 /* thread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = thread.c; sourceTree = "<group>"; };
+		753D16CD907AF790F753B558 /* test-udp-multicast-join.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-multicast-join.c"; sourceTree = "<group>"; };
+		76276F38C6E3CB81D6B9D005 /* tty.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tty.c; sourceTree = "<group>"; };
+		7643716417C711503BFD09A3 /* runner-unix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "runner-unix.c"; sourceTree = "<group>"; };
+		7A5D75A691063FB193F49581 /* test-emfile.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-emfile.c"; sourceTree = "<group>"; };
+		7BE3C2C2E8F3FA98411914C0 /* dns-server.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "dns-server.c"; sourceTree = "<group>"; };
+		7D6D09E1F9DB830837B62C50 /* test-timer-from-check.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-timer-from-check.c"; sourceTree = "<group>"; };
+		7EC23082E8F928451E8E9FEE /* test-default-loop-close.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-default-loop-close.c"; sourceTree = "<group>"; };
+		80161391BFD0E1727CC6E837 /* test-tcp-shutdown-after-write.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-shutdown-after-write.c"; sourceTree = "<group>"; };
+		829B274662468FF818DE670A /* getnameinfo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = getnameinfo.c; sourceTree = "<group>"; };
+		83D6BBECA2A9EE0DB7299A42 /* test-udp-send-unreachable.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-send-unreachable.c"; sourceTree = "<group>"; };
+		864476C468B50352BC52D3A3 /* threadpool.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = threadpool.c; sourceTree = "<group>"; };
+		87E6CBAAE987592E6E6D92DF /* benchmark-million-timers.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-million-timers.c"; sourceTree = "<group>"; };
+		8AFA5C670D8AD48D37984209 /* test-dlerror.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-dlerror.c"; sourceTree = "<group>"; };
+		8B579310E33D590B7B2986DD /* benchmark-pound.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-pound.c"; sourceTree = "<group>"; };
+		8C724E4DDDD8340B9D7EABA2 /* heap-inl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "heap-inl.h"; sourceTree = "<group>"; };
+		8D4D4F766CFD4876472B6BC7 /* pipe.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pipe.c; sourceTree = "<group>"; };
+		8E551C652371445F29B89AB7 /* test-threadpool.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-threadpool.c"; sourceTree = "<group>"; };
+		8E758132FDE9BA65B4A096D4 /* async.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = async.c; sourceTree = "<group>"; };
+		92E65E4E829DFC6B12328D4E /* test-osx-select.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-osx-select.c"; sourceTree = "<group>"; };
+		94A00AA5A32C69299238B9FB /* test-pipe-connect-error.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-pipe-connect-error.c"; sourceTree = "<group>"; };
+		9764EB1AF01FEE7410B386B7 /* version.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = version.c; sourceTree = "<group>"; };
+		9844B804CF9FD3F84901E31F /* test-tcp-bind-error.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-bind-error.c"; sourceTree = "<group>"; };
+		9A85D4B35FA78E4673FDD2E8 /* test-semaphore.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-semaphore.c"; sourceTree = "<group>"; };
+		9B265B9316142326C0198456 /* test-tcp-connect-error-after-write.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-connect-error-after-write.c"; sourceTree = "<group>"; };
+		9C66F1246EAC664C01670583 /* core.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = core.c; sourceTree = "<group>"; };
+		A03696FA99CF2374C856CF34 /* test-udp-bind.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-bind.c"; sourceTree = "<group>"; };
+		A10EBDAE85276BB1DAC6BEC2 /* test-tcp-read-stop.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-read-stop.c"; sourceTree = "<group>"; };
+		A26C180EE30D49BE2B413E7F /* test-thread-equal.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-thread-equal.c"; sourceTree = "<group>"; };
+		A373F4CCC990B3E443A17858 /* test-udp-send-and-recv.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-send-and-recv.c"; sourceTree = "<group>"; };
+		A3811BFCF2926F88A89337BB /* test-active.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-active.c"; sourceTree = "<group>"; };
+		A3F3A4F2D17FD2A483AF51FA /* test-tcp-flags.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-flags.c"; sourceTree = "<group>"; };
+		A8597217335FF84165153D4B /* test-tcp-close.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-close.c"; sourceTree = "<group>"; };
+		A9675BCCFA028E67B099FAD9 /* benchmark-spawn.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-spawn.c"; sourceTree = "<group>"; };
+		AA6B994642205C21E60C743E /* test-signal.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-signal.c"; sourceTree = "<group>"; };
+		AAE6BB7739A206F4F97560A1 /* uv-linux.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uv-linux.h"; sourceTree = "<group>"; };
+		AB5162813A86658ED3C35DE7 /* test-tcp-close-while-connecting.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-close-while-connecting.c"; sourceTree = "<group>"; };
+		ACF4D2EA3CDC0D3720CC6652 /* signal.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = signal.c; sourceTree = "<group>"; };
+		AD42F3CCDCFBAD05F8AC243F /* test-watcher-cross-stop.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-watcher-cross-stop.c"; sourceTree = "<group>"; };
+		AD66A8CB1CEC48AD0FFF2F9F /* test-tcp-connect6-error.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-connect6-error.c"; sourceTree = "<group>"; };
+		AE4D2060456EF8924D630BF5 /* test-tcp-writealot.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-writealot.c"; sourceTree = "<group>"; };
+		AE5B26B1B281FE8E387DFF3B /* test-get-memory.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-get-memory.c"; sourceTree = "<group>"; };
+		B0708FEC17D43F3E8C955C3C /* test-condvar.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-condvar.c"; sourceTree = "<group>"; };
+		B08C62A77EEF9BD15C8E8E21 /* test-socket-buffer-size.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-socket-buffer-size.c"; sourceTree = "<group>"; };
+		B22DD3075F8496F6CCB30FF4 /* test-timer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-timer.c"; sourceTree = "<group>"; };
+		B23671ECA0B5788EB95304F3 /* runner-unix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "runner-unix.h"; sourceTree = "<group>"; };
+		B2A5682EB1EBDB63A5A4FF68 /* test-tcp-open.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-open.c"; sourceTree = "<group>"; };
+		BBEFD651AC62E551810B8D34 /* uv-aix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uv-aix.h"; sourceTree = "<group>"; };
+		BC29DD05C9D8E927B20DFA52 /* test-stdio-over-pipes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-stdio-over-pipes.c"; sourceTree = "<group>"; };
+		BD566A6717132B083504D61D /* udp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = udp.c; sourceTree = "<group>"; };
+		BD5E74D310D653A066452658 /* test-close-order.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-close-order.c"; sourceTree = "<group>"; };
+		BDD22039B6923DFA419D3E31 /* poll.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = poll.c; sourceTree = "<group>"; };
+		BE8E84F5A2DBE36ABA83AB77 /* test-udp-try-send.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-try-send.c"; sourceTree = "<group>"; };
+		BE99830220F54369574D85E4 /* test-spawn.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-spawn.c"; sourceTree = "<group>"; };
+		BED29F62F7EA09D75179DCB2 /* loop-watcher.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "loop-watcher.c"; sourceTree = "<group>"; };
+		BFD52B5225416F015C700E0E /* uv-unix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uv-unix.h"; sourceTree = "<group>"; };
+		C0D8DB4019A65E9B53025FE6 /* test-tty.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tty.c"; sourceTree = "<group>"; };
+		C1B02795E043A2AEAD2C9F33 /* benchmark-tcp-write-batch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-tcp-write-batch.c"; sourceTree = "<group>"; };
+		C353118A0EDAD5BCC72C5FE9 /* benchmark-loop-count.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-loop-count.c"; sourceTree = "<group>"; };
+		C48656DFFE1310B186A165A2 /* spinlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = spinlock.h; sourceTree = "<group>"; };
+		C6C0358734B0B1F9B852FD94 /* test-idle.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-idle.c"; sourceTree = "<group>"; };
+		C71EC85F047F99FE208C1F0D /* test-signal-multiple-loops.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-signal-multiple-loops.c"; sourceTree = "<group>"; };
+		C9438BC085BFB10797057568 /* benchmark-fs-stat.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-fs-stat.c"; sourceTree = "<group>"; };
+		C9C75784CD22A66F9F04C7B5 /* run-tests.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "run-tests.c"; sourceTree = "<group>"; };
+		CB406F622239E7FAAAB8EAE2 /* test-loop-handles.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-loop-handles.c"; sourceTree = "<group>"; };
+		CB508B03B6E18FC82BBEF94B /* uv.gyp */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = uv.gyp; sourceTree = "<group>"; };
+		CB8103F2E2700E5FEBF27904 /* test-poll.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-poll.c"; sourceTree = "<group>"; };
+		CBD7AB980C90721CA1D5F82C /* process.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = process.c; sourceTree = "<group>"; };
+		CBDF89446097E83456C90765 /* test-shutdown-eof.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-shutdown-eof.c"; sourceTree = "<group>"; };
+		CC44B006CDC6EFB4961A5F4F /* test-udp-multicast-interface6.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-multicast-interface6.c"; sourceTree = "<group>"; };
+		CDC77C6FE2E92DC29985355B /* test-getnameinfo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-getnameinfo.c"; sourceTree = "<group>"; };
+		CF662168075D9D5B94C51DB0 /* test-tcp-close-accept.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-close-accept.c"; sourceTree = "<group>"; };
+		D05EF13C96D6FD6A56C6ABCF /* uv-threadpool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uv-threadpool.h"; sourceTree = "<group>"; };
+		D104A37848709B637D0EE191 /* benchmark-list.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "benchmark-list.h"; sourceTree = "<group>"; };
+		D35EF8AE3F1599379B059C21 /* test-callback-order.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-callback-order.c"; sourceTree = "<group>"; };
+		D46A15BA83C3F90AC2DD2DD7 /* run-benchmarks.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "run-benchmarks.c"; sourceTree = "<group>"; };
+		D5DBA64661E3E3823FF0B65B /* kqueue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kqueue.c; sourceTree = "<group>"; };
+		D6DAE8C2782A52106270890A /* test-ipc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-ipc.c"; sourceTree = "<group>"; };
+		D76CFDEC5CCCB2F04CE35957 /* test-tcp-unexpected-read.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tcp-unexpected-read.c"; sourceTree = "<group>"; };
+		D802F084D22996AAB91E635A /* test-pipe-bind-error.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-pipe-bind-error.c"; sourceTree = "<group>"; };
+		D8284066040C7BF32BECF7D8 /* test-udp-multicast-ttl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-multicast-ttl.c"; sourceTree = "<group>"; };
+		D92DBEDBC6997337583EAFA9 /* test-mutexes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-mutexes.c"; sourceTree = "<group>"; };
+		D92F58BC7E8AA50F48943FA9 /* test-loop-stop.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-loop-stop.c"; sourceTree = "<group>"; };
+		DBDA1EFD678C245D220F1B03 /* test-callback-stack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-callback-stack.c"; sourceTree = "<group>"; };
+		DBF9320C8747AC249A48252B /* test-poll-close.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-poll-close.c"; sourceTree = "<group>"; };
+		DC7ABE0C36CD714B1FEEE137 /* uv-common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "uv-common.h"; sourceTree = "<group>"; };
+		E15E9A50BC6B315A09BE15AC /* test-connection-fail.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-connection-fail.c"; sourceTree = "<group>"; };
+		E1F38034811CC5EE9AD2B423 /* test-udp-options.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-udp-options.c"; sourceTree = "<group>"; };
+		E368BCF1DD85809BEF537A3F /* benchmark-udp-pummel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-udp-pummel.c"; sourceTree = "<group>"; };
+		E693261F971F3A54AC55C056 /* test-platform-output.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-platform-output.c"; sourceTree = "<group>"; };
+		E822CE24A76F2A8ABCB6EED8 /* test-run-once.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-run-once.c"; sourceTree = "<group>"; };
+		EAF88C350DA632FD65EA9957 /* tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tree.h; sourceTree = "<group>"; };
+		EC43658C0E7B3EEEC341967B /* test-fs.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-fs.c"; sourceTree = "<group>"; };
+		EC7AB15B659A670D56F3E16B /* test-pipe-getsockname.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-pipe-getsockname.c"; sourceTree = "<group>"; };
+		ED9B014AF7582AA76DB79DB1 /* test-getsockname.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-getsockname.c"; sourceTree = "<group>"; };
+		EF8C2717D547EFDA37597CB2 /* benchmark-sizes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-sizes.c"; sourceTree = "<group>"; };
+		F02F82DD80486DBBBD8719C1 /* queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
+		F06422AD8BB826729E6A5574 /* test-close-fd.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-close-fd.c"; sourceTree = "<group>"; };
+		F0CD1F73A009BCBE5A154BCC /* benchmark-async.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "benchmark-async.c"; sourceTree = "<group>"; };
+		F10903B978B991B31FF3B017 /* test-walk-handles.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-walk-handles.c"; sourceTree = "<group>"; };
+		F14E652AA41D129869B3DE4A /* test-ip4-addr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-ip4-addr.c"; sourceTree = "<group>"; };
+		F2EC593AFD68A9BF413FC922 /* test-get-currentexe.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-get-currentexe.c"; sourceTree = "<group>"; };
+		F352721F73E72394A3FE9461 /* test-thread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-thread.c"; sourceTree = "<group>"; };
+		F421F5C124F677089D975332 /* test-error.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-error.c"; sourceTree = "<group>"; };
+		F5347A0AEF20A452216DACA2 /* test-loop-close.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-loop-close.c"; sourceTree = "<group>"; };
+		F8A674950A4175FC3627F8EF /* test-poll-closesocket.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-poll-closesocket.c"; sourceTree = "<group>"; };
+		FB9BD151BFC6BA6B11502F14 /* test-timer-again.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-timer-again.c"; sourceTree = "<group>"; };
+		FF6D88115DA2D561A23C3983 /* test-fs-poll.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-fs-poll.c"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00AF9DECCD0093346201E0A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FCF82A29347B8DA90A22EB4 /* libuv.a in Frameworks */,
+				C1EB08B6577E46570D9AA056 /* -lm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29E56E392DE49B04B94293E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32D9DF4C4B21AC1FABE8140D /* libuv.a in Frameworks */,
+				AA4B0123D7C553822EEAAA2F /* -lm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE431C080E4A0226E726296F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B4240635CAD89BEE763CA39 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				9A4341B45E7723EE04568EC8 /* include */,
+				2322E194F5877AE5EE1ED1B0 /* src */,
+				927B762AD1DFD5466E8BE631 /* test */,
+				698430D69C4B1AB970EBD864 /* common.gypi */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		2322E194F5877AE5EE1ED1B0 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2929F6C390E7D4370B5FDB15 /* unix */,
+				275071A6DFDDD433F83BD38C /* fs-poll.c */,
+				8C724E4DDDD8340B9D7EABA2 /* heap-inl.h */,
+				0EC6247DFE08AEF6EBA979B4 /* inet.c */,
+				F02F82DD80486DBBBD8719C1 /* queue.h */,
+				864476C468B50352BC52D3A3 /* threadpool.c */,
+				1743CFEBD471F9E247E53C9C /* uv-common.c */,
+				DC7ABE0C36CD714B1FEEE137 /* uv-common.h */,
+				9764EB1AF01FEE7410B386B7 /* version.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		235DA12D624188A37621E639 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				CB508B03B6E18FC82BBEF94B /* uv.gyp */,
+			);
+			name = Build;
+			sourceTree = "<group>";
+		};
+		2929F6C390E7D4370B5FDB15 /* unix */ = {
+			isa = PBXGroup;
+			children = (
+				8E758132FDE9BA65B4A096D4 /* async.c */,
+				63688E4796C75785EC5DA9BC /* atomic-ops.h */,
+				9C66F1246EAC664C01670583 /* core.c */,
+				517FF12C5A6AC0AADF373C45 /* darwin-proctitle.c */,
+				57210460BBB5FD25100F471D /* darwin.c */,
+				2BC84FC9CCCEF95ECCA4E892 /* dl.c */,
+				3E221E3487C83972954FE3F4 /* fs.c */,
+				241DD966C4A104726884AB3E /* fsevents.c */,
+				55DADA8B912C46174791CBC8 /* getaddrinfo.c */,
+				829B274662468FF818DE670A /* getnameinfo.c */,
+				216622BFD37947A32980CE52 /* internal.h */,
+				D5DBA64661E3E3823FF0B65B /* kqueue.c */,
+				BED29F62F7EA09D75179DCB2 /* loop-watcher.c */,
+				52786454B42E90186DCDED30 /* loop.c */,
+				8D4D4F766CFD4876472B6BC7 /* pipe.c */,
+				BDD22039B6923DFA419D3E31 /* poll.c */,
+				CBD7AB980C90721CA1D5F82C /* process.c */,
+				18C3C1DE5A5FC3AE0E03B2D7 /* proctitle.c */,
+				ACF4D2EA3CDC0D3720CC6652 /* signal.c */,
+				C48656DFFE1310B186A165A2 /* spinlock.h */,
+				16FB9E3B8ED8630C181F2567 /* stream.c */,
+				006788E3A1BCDB01D5AFA26D /* tcp.c */,
+				74F0F674CFBF30A1336F6106 /* thread.c */,
+				32389543F04A65EF40964A95 /* timer.c */,
+				76276F38C6E3CB81D6B9D005 /* tty.c */,
+				BD566A6717132B083504D61D /* udp.c */,
+			);
+			path = unix;
+			sourceTree = "<group>";
+		};
+		3C2D43C4248E2EAF285B3F09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				318EA9866DFFC64ACAC4F152 /* -lm */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		927B762AD1DFD5466E8BE631 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				3C5B7938E5573807B173EE9A /* benchmark-async-pummel.c */,
+				F0CD1F73A009BCBE5A154BCC /* benchmark-async.c */,
+				C9438BC085BFB10797057568 /* benchmark-fs-stat.c */,
+				71A3FF0C938F91ED2A7D18A4 /* benchmark-getaddrinfo.c */,
+				D104A37848709B637D0EE191 /* benchmark-list.h */,
+				C353118A0EDAD5BCC72C5FE9 /* benchmark-loop-count.c */,
+				0B9678FEDDD905E7E042A429 /* benchmark-million-async.c */,
+				87E6CBAAE987592E6E6D92DF /* benchmark-million-timers.c */,
+				45EB8B2FFCAEB423EBD7802F /* benchmark-multi-accept.c */,
+				08B4926132CCE7E662372FE0 /* benchmark-ping-pongs.c */,
+				8B579310E33D590B7B2986DD /* benchmark-pound.c */,
+				60229CE02A7CA975502B2552 /* benchmark-pump.c */,
+				EF8C2717D547EFDA37597CB2 /* benchmark-sizes.c */,
+				A9675BCCFA028E67B099FAD9 /* benchmark-spawn.c */,
+				C1B02795E043A2AEAD2C9F33 /* benchmark-tcp-write-batch.c */,
+				1AEDC356AC91C38ACEFE41F6 /* benchmark-thread.c */,
+				E368BCF1DD85809BEF537A3F /* benchmark-udp-pummel.c */,
+				662B2D2317B6A44E4F973607 /* blackhole-server.c */,
+				7BE3C2C2E8F3FA98411914C0 /* dns-server.c */,
+				13A481055CD717DF2541FF08 /* echo-server.c */,
+				D46A15BA83C3F90AC2DD2DD7 /* run-benchmarks.c */,
+				C9C75784CD22A66F9F04C7B5 /* run-tests.c */,
+				7643716417C711503BFD09A3 /* runner-unix.c */,
+				B23671ECA0B5788EB95304F3 /* runner-unix.h */,
+				40E9BEDAF8EE8374DF7FB743 /* runner.c */,
+				1090AB4394C6592B39BEF8F1 /* runner.h */,
+				5CA87C31857A5C8F3368B21D /* task.h */,
+				A3811BFCF2926F88A89337BB /* test-active.c */,
+				3F5DD187928ADB6667F09F88 /* test-async-null-cb.c */,
+				09E1C49826F829FC6D2C4C32 /* test-async.c */,
+				280831C5E7E115B84C341EC2 /* test-barrier.c */,
+				D35EF8AE3F1599379B059C21 /* test-callback-order.c */,
+				DBDA1EFD678C245D220F1B03 /* test-callback-stack.c */,
+				F06422AD8BB826729E6A5574 /* test-close-fd.c */,
+				BD5E74D310D653A066452658 /* test-close-order.c */,
+				B0708FEC17D43F3E8C955C3C /* test-condvar.c */,
+				E15E9A50BC6B315A09BE15AC /* test-connection-fail.c */,
+				510D28C6CBBAA70DAA6B8D5B /* test-cwd-and-chdir.c */,
+				7EC23082E8F928451E8E9FEE /* test-default-loop-close.c */,
+				2FCBDF1C9514BDE6E5AACC5F /* test-delayed-accept.c */,
+				8AFA5C670D8AD48D37984209 /* test-dlerror.c */,
+				6F9C81A962726E4A9A970ECC /* test-embed.c */,
+				7A5D75A691063FB193F49581 /* test-emfile.c */,
+				F421F5C124F677089D975332 /* test-error.c */,
+				3C6C0F1C14D7606E450409AB /* test-fail-always.c */,
+				66D63C076D568F1435ED3BA7 /* test-fs-event.c */,
+				FF6D88115DA2D561A23C3983 /* test-fs-poll.c */,
+				EC43658C0E7B3EEEC341967B /* test-fs.c */,
+				F2EC593AFD68A9BF413FC922 /* test-get-currentexe.c */,
+				25C0E15B19C98D21BBF14E96 /* test-get-loadavg.c */,
+				AE5B26B1B281FE8E387DFF3B /* test-get-memory.c */,
+				6DA61F76AB0AADB4595DA36C /* test-getaddrinfo.c */,
+				CDC77C6FE2E92DC29985355B /* test-getnameinfo.c */,
+				ED9B014AF7582AA76DB79DB1 /* test-getsockname.c */,
+				3B5604D1DBD34A5FDFA57981 /* test-handle-fileno.c */,
+				2506BBD8F8CF2CDF3156BD50 /* test-hrtime.c */,
+				C6C0358734B0B1F9B852FD94 /* test-idle.c */,
+				F14E652AA41D129869B3DE4A /* test-ip4-addr.c */,
+				0DE3FF067A0D9D621D20B070 /* test-ip6-addr.c */,
+				0610F0CB80462AA5B4062F9B /* test-ipc-send-recv.c */,
+				D6DAE8C2782A52106270890A /* test-ipc.c */,
+				57DE6015068DF11062A0843F /* test-list.h */,
+				3F961B6A5A3F591D890497CE /* test-loop-alive.c */,
+				F5347A0AEF20A452216DACA2 /* test-loop-close.c */,
+				17294BC3AD3DCDC3E80D461D /* test-loop-configure.c */,
+				CB406F622239E7FAAAB8EAE2 /* test-loop-handles.c */,
+				D92F58BC7E8AA50F48943FA9 /* test-loop-stop.c */,
+				6A8DA76D9A94B1AAF8714821 /* test-loop-time.c */,
+				25A2B2B952E30889A1473E1D /* test-multiple-listen.c */,
+				D92DBEDBC6997337583EAFA9 /* test-mutexes.c */,
+				92E65E4E829DFC6B12328D4E /* test-osx-select.c */,
+				364B397F5209268AE3568849 /* test-pass-always.c */,
+				03D9E038B87B5924BB8CE155 /* test-ping-pong.c */,
+				D802F084D22996AAB91E635A /* test-pipe-bind-error.c */,
+				64C644A422047C69C844F732 /* test-pipe-close-stdout-read-stdin.c */,
+				94A00AA5A32C69299238B9FB /* test-pipe-connect-error.c */,
+				EC7AB15B659A670D56F3E16B /* test-pipe-getsockname.c */,
+				49B7F93D0250F6B54AE5CF01 /* test-pipe-sendmsg.c */,
+				4833BB821B0861464DD5931B /* test-pipe-server-close.c */,
+				27ACD6F955788DA6404CFD7A /* test-pipe-set-non-blocking.c */,
+				E693261F971F3A54AC55C056 /* test-platform-output.c */,
+				395901B57C62B2593733939E /* test-poll-close-doesnt-corrupt-stack.c */,
+				DBF9320C8747AC249A48252B /* test-poll-close.c */,
+				F8A674950A4175FC3627F8EF /* test-poll-closesocket.c */,
+				CB8103F2E2700E5FEBF27904 /* test-poll.c */,
+				3CB9B0B07A7DA38C302B48B6 /* test-process-title.c */,
+				510468EABB26161A1D2D22BD /* test-ref.c */,
+				3AB5075313B1DD32C65F7CF4 /* test-run-nowait.c */,
+				E822CE24A76F2A8ABCB6EED8 /* test-run-once.c */,
+				9A85D4B35FA78E4673FDD2E8 /* test-semaphore.c */,
+				4A6F0573AC5F1585B4FD64CC /* test-shutdown-close.c */,
+				CBDF89446097E83456C90765 /* test-shutdown-eof.c */,
+				2C1445428337CBE45F7C04F3 /* test-shutdown-twice.c */,
+				C71EC85F047F99FE208C1F0D /* test-signal-multiple-loops.c */,
+				AA6B994642205C21E60C743E /* test-signal.c */,
+				B08C62A77EEF9BD15C8E8E21 /* test-socket-buffer-size.c */,
+				BE99830220F54369574D85E4 /* test-spawn.c */,
+				BC29DD05C9D8E927B20DFA52 /* test-stdio-over-pipes.c */,
+				9844B804CF9FD3F84901E31F /* test-tcp-bind-error.c */,
+				21F44E6CE90F411154093C0A /* test-tcp-bind6-error.c */,
+				CF662168075D9D5B94C51DB0 /* test-tcp-close-accept.c */,
+				AB5162813A86658ED3C35DE7 /* test-tcp-close-while-connecting.c */,
+				A8597217335FF84165153D4B /* test-tcp-close.c */,
+				9B265B9316142326C0198456 /* test-tcp-connect-error-after-write.c */,
+				53DEF1C9AD211DAE223A543B /* test-tcp-connect-error.c */,
+				70A0058B0DBA0A5023BA6FF8 /* test-tcp-connect-timeout.c */,
+				AD66A8CB1CEC48AD0FFF2F9F /* test-tcp-connect6-error.c */,
+				A3F3A4F2D17FD2A483AF51FA /* test-tcp-flags.c */,
+				46D40610F865EA0120DCCADE /* test-tcp-oob.c */,
+				B2A5682EB1EBDB63A5A4FF68 /* test-tcp-open.c */,
+				A10EBDAE85276BB1DAC6BEC2 /* test-tcp-read-stop.c */,
+				80161391BFD0E1727CC6E837 /* test-tcp-shutdown-after-write.c */,
+				21CEB4E7A7E0E40FFAA67AC9 /* test-tcp-try-write.c */,
+				D76CFDEC5CCCB2F04CE35957 /* test-tcp-unexpected-read.c */,
+				68594A18E2DCC38B2C7B8994 /* test-tcp-write-after-connect.c */,
+				3536B3FCBBC6BF02FF566F98 /* test-tcp-write-queue-order.c */,
+				316AD7C948F5B2930EB33AD2 /* test-tcp-write-to-half-open-connection.c */,
+				AE4D2060456EF8924D630BF5 /* test-tcp-writealot.c */,
+				A26C180EE30D49BE2B413E7F /* test-thread-equal.c */,
+				F352721F73E72394A3FE9461 /* test-thread.c */,
+				56557578B6C2CCB8638B8B02 /* test-threadpool-cancel.c */,
+				8E551C652371445F29B89AB7 /* test-threadpool.c */,
+				FB9BD151BFC6BA6B11502F14 /* test-timer-again.c */,
+				7D6D09E1F9DB830837B62C50 /* test-timer-from-check.c */,
+				B22DD3075F8496F6CCB30FF4 /* test-timer.c */,
+				C0D8DB4019A65E9B53025FE6 /* test-tty.c */,
+				A03696FA99CF2374C856CF34 /* test-udp-bind.c */,
+				3188617F19884B6515B431D3 /* test-udp-dgram-too-big.c */,
+				3DC7B54C76C44A7ED402E734 /* test-udp-ipv6.c */,
+				712B9514649835AA8BB05623 /* test-udp-multicast-interface.c */,
+				CC44B006CDC6EFB4961A5F4F /* test-udp-multicast-interface6.c */,
+				753D16CD907AF790F753B558 /* test-udp-multicast-join.c */,
+				528BABAED3E116FEB2ABE66F /* test-udp-multicast-join6.c */,
+				D8284066040C7BF32BECF7D8 /* test-udp-multicast-ttl.c */,
+				620073D11E295FE9C2A37CEA /* test-udp-open.c */,
+				E1F38034811CC5EE9AD2B423 /* test-udp-options.c */,
+				A373F4CCC990B3E443A17858 /* test-udp-send-and-recv.c */,
+				53743920969AD5942F8C47C0 /* test-udp-send-immediate.c */,
+				83D6BBECA2A9EE0DB7299A42 /* test-udp-send-unreachable.c */,
+				BE8E84F5A2DBE36ABA83AB77 /* test-udp-try-send.c */,
+				F10903B978B991B31FF3B017 /* test-walk-handles.c */,
+				AD42F3CCDCFBAD05F8AC243F /* test-watcher-cross-stop.c */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		9441FFEF004DB5FD3E72FDB0 = {
+			isa = PBXGroup;
+			children = (
+				0B4240635CAD89BEE763CA39 /* Source */,
+				3C2D43C4248E2EAF285B3F09 /* Frameworks */,
+				B558567D77938862D4BF0470 /* Products */,
+				235DA12D624188A37621E639 /* Build */,
+			);
+			sourceTree = "<group>";
+		};
+		9A4341B45E7723EE04568EC8 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				EAF88C350DA632FD65EA9957 /* tree.h */,
+				BBEFD651AC62E551810B8D34 /* uv-aix.h */,
+				607A344614B870FBA1D1B528 /* uv-bsd.h */,
+				711BCB828F6A9DF68CA2C3E8 /* uv-darwin.h */,
+				4ABBB4CF36A1637698DC44FF /* uv-errno.h */,
+				AAE6BB7739A206F4F97560A1 /* uv-linux.h */,
+				29C1ACAEBB117D9E1322949A /* uv-sunos.h */,
+				D05EF13C96D6FD6A56C6ABCF /* uv-threadpool.h */,
+				BFD52B5225416F015C700E0E /* uv-unix.h */,
+				1E84D000CDC728FA50E13F9F /* uv-version.h */,
+				06164444BD9491650B2F269F /* uv.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		B558567D77938862D4BF0470 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1366FBDA3B41EA03E9CC86CA /* libuv.a */,
+				64757BCA7335FEFCED9A25EC /* run-tests */,
+				0F9AD78A28D4AB83078B4C46 /* run-benchmarks */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		178071661CB321BB5A46AC92 /* libuv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C25720DE719950FCE3D0A683 /* Build configuration list for PBXNativeTarget "libuv" */;
+			buildPhases = (
+				3C2B766126B21EA9E789F2EB /* Sources */,
+				BE431C080E4A0226E726296F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libuv;
+			productName = uv;
+			productReference = 1366FBDA3B41EA03E9CC86CA /* libuv.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A481575742DC2CA77987CD55 /* run-benchmarks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 450E2E0DC03F33D0AC4940CE /* Build configuration list for PBXNativeTarget "run-benchmarks" */;
+			buildPhases = (
+				C38217403FE9A1EA2651E740 /* Sources */,
+				00AF9DECCD0093346201E0A6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				917ABF657662CB7B4E1A185B /* PBXTargetDependency */,
+			);
+			name = "run-benchmarks";
+			productName = "run-benchmarks";
+			productReference = 0F9AD78A28D4AB83078B4C46 /* run-benchmarks */;
+			productType = "com.apple.product-type.tool";
+		};
+		D9233647E13A9525F991A21E /* run-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CDE5F6C5456C810EBDF1ABD /* Build configuration list for PBXNativeTarget "run-tests" */;
+			buildPhases = (
+				2221359F17BEE8166E8AFAC9 /* Sources */,
+				29E56E392DE49B04B94293E4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC5EB1057A1DAFCDCA0EF249 /* PBXTargetDependency */,
+			);
+			name = "run-tests";
+			productName = "run-tests";
+			productReference = 64757BCA7335FEFCED9A25EC /* run-tests */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36EC565658762C7175600AFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 8C5C4470AE99DE5DE330356A /* Build configuration list for PBXProject "uv" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 9441FFEF004DB5FD3E72FDB0;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1BF323A2B02F1EC68832C2CB /* All */,
+				178071661CB321BB5A46AC92 /* libuv */,
+				D9233647E13A9525F991A21E /* run-tests */,
+				A481575742DC2CA77987CD55 /* run-benchmarks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2221359F17BEE8166E8AFAC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				995258038C845FF479ED16BE /* blackhole-server.c in Sources */,
+				2B756F1B5F7ECB5A79B8D518 /* echo-server.c in Sources */,
+				2AE8278DDE915C13FECEFDD9 /* run-tests.c in Sources */,
+				9A7FD2922FB70F0A515079BD /* runner.c in Sources */,
+				818FFABBBB88AF505C5A2871 /* test-get-loadavg.c in Sources */,
+				BA2EEBFA115A7058E26B14A1 /* test-active.c in Sources */,
+				FE8747C72C8D07F6FC91D7DE /* test-async.c in Sources */,
+				2301A8FA5416CEA6EA72D87B /* test-async-null-cb.c in Sources */,
+				FF8A786090BC28BD046B045A /* test-callback-stack.c in Sources */,
+				C005E0D4101F3952950F6720 /* test-callback-order.c in Sources */,
+				2AE68E3D17ED1E92AF109D80 /* test-close-fd.c in Sources */,
+				B512E0C4305AB19C78598A0A /* test-close-order.c in Sources */,
+				EEDF7256D374A3B7BE3ED1A5 /* test-connection-fail.c in Sources */,
+				6DC9A0B54AA52FADDC180DBC /* test-cwd-and-chdir.c in Sources */,
+				4825525DC0BE4F23DC354762 /* test-default-loop-close.c in Sources */,
+				39E433C5A4F78C0C28882E6C /* test-delayed-accept.c in Sources */,
+				9415FDC588192714FBA4F19D /* test-error.c in Sources */,
+				10A8C140E2F2ED2F196FA5D9 /* test-embed.c in Sources */,
+				A24AC161CFC0FFA72ED385E9 /* test-emfile.c in Sources */,
+				28EC9CAC5B5DC4C464E538E3 /* test-fail-always.c in Sources */,
+				08BAEB683C324779E732DCD7 /* test-fs.c in Sources */,
+				DC3E8C557934621070E18F7F /* test-fs-event.c in Sources */,
+				E0FD5AED7D4D2DFDC14E544A /* test-get-currentexe.c in Sources */,
+				8D419554E3B9E25E6785C059 /* test-get-memory.c in Sources */,
+				FFF27EF338BBF932C39572C1 /* test-getaddrinfo.c in Sources */,
+				F0EAF51F7B02FCB4CB193737 /* test-getnameinfo.c in Sources */,
+				F6C90AF52EFA1594980AD636 /* test-getsockname.c in Sources */,
+				237D7E81EE01CA9B1714A2B1 /* test-handle-fileno.c in Sources */,
+				F12503EB5B91B22BAAEAFA2D /* test-hrtime.c in Sources */,
+				65EE158E43546415D3AF1658 /* test-idle.c in Sources */,
+				7D79680812B6F4AF243EE55F /* test-ip6-addr.c in Sources */,
+				572CF22482D9BB31A41C92CF /* test-ipc.c in Sources */,
+				83F758F012425F23A073BB87 /* test-ipc-send-recv.c in Sources */,
+				CF1CA521E011061B5B0F1EFE /* test-loop-handles.c in Sources */,
+				DE2781FCE199F31E48E8AA85 /* test-loop-alive.c in Sources */,
+				25B8321E36F68A45EE057C28 /* test-loop-close.c in Sources */,
+				9897070398F4C4B588F32495 /* test-loop-stop.c in Sources */,
+				5C8282A317078087C4E66123 /* test-loop-time.c in Sources */,
+				C3CB9236BFF71CD9CD214ACC /* test-loop-configure.c in Sources */,
+				421B36606B8544040BC05441 /* test-walk-handles.c in Sources */,
+				6241F1079E1A9A7AF262F088 /* test-watcher-cross-stop.c in Sources */,
+				A813620B7E1A323D164BC394 /* test-multiple-listen.c in Sources */,
+				1EFCB25C7171C108A2AD1BBA /* test-osx-select.c in Sources */,
+				3D80337A8AD4461AA054EC57 /* test-pass-always.c in Sources */,
+				E08029A4FCCE598C95958A62 /* test-ping-pong.c in Sources */,
+				F7FEF6472B6C05B38C76FECB /* test-pipe-bind-error.c in Sources */,
+				542F81719825A6A8114AFDFA /* test-pipe-connect-error.c in Sources */,
+				19F0773320544A23F31A6CA9 /* test-pipe-getsockname.c in Sources */,
+				3AD8370F96307E9C21321F3C /* test-pipe-sendmsg.c in Sources */,
+				766E04F4851D17C38A3485D9 /* test-pipe-server-close.c in Sources */,
+				D05EFA54C267B028D3B10F5F /* test-pipe-close-stdout-read-stdin.c in Sources */,
+				076D352898850DCF21A9A69E /* test-pipe-set-non-blocking.c in Sources */,
+				BD0D22583FC16B7D58785566 /* test-platform-output.c in Sources */,
+				BCB5D2C3930FD2006E356E42 /* test-poll.c in Sources */,
+				E77EF05ABD7548024F7E4096 /* test-poll-close.c in Sources */,
+				89EFC748A5B6A431A761F86E /* test-poll-close-doesnt-corrupt-stack.c in Sources */,
+				4D00D296632ABFA9BE61AD55 /* test-poll-closesocket.c in Sources */,
+				D7E433555BD782DF6C129ED0 /* test-process-title.c in Sources */,
+				C67DEE35852986D5C5D6878F /* test-ref.c in Sources */,
+				FFB2FC268CB346B7D38911B9 /* test-run-nowait.c in Sources */,
+				C73F48C9F6F59023DC1C5C93 /* test-run-once.c in Sources */,
+				EC7A6F3BE572FC0FE81A9754 /* test-semaphore.c in Sources */,
+				2BBD0FA5F7950C6CC5A56608 /* test-shutdown-close.c in Sources */,
+				B3B878F36659C7A5939A93F8 /* test-shutdown-eof.c in Sources */,
+				5671F403D73F34CE0687BF17 /* test-shutdown-twice.c in Sources */,
+				91DDC7E0397EBFB3D1F09E12 /* test-signal.c in Sources */,
+				8023C8194E70665CA590DA35 /* test-signal-multiple-loops.c in Sources */,
+				C2E147688B2BE2F6CC1192E1 /* test-socket-buffer-size.c in Sources */,
+				842E40FBD738703F1F556EF9 /* test-spawn.c in Sources */,
+				663983D3F9DF9D7F094663B1 /* test-fs-poll.c in Sources */,
+				2D97A575BC7A5C0485086947 /* test-stdio-over-pipes.c in Sources */,
+				B81FC3361AD6F12C065B6A86 /* test-tcp-bind-error.c in Sources */,
+				F1793EE633B19218ACEA822A /* test-tcp-bind6-error.c in Sources */,
+				45FE77933F7C5AC9D64A9C1A /* test-tcp-close.c in Sources */,
+				D7DE58AD9096A1BAEA545900 /* test-tcp-close-accept.c in Sources */,
+				67B1062ECB9145AE04E32099 /* test-tcp-close-while-connecting.c in Sources */,
+				38C507E4ECDE8ADAE933C2D7 /* test-tcp-connect-error-after-write.c in Sources */,
+				BFB52268BE206BD1F9A96C5D /* test-tcp-shutdown-after-write.c in Sources */,
+				94BEA3E69962509E94DBB8D6 /* test-tcp-flags.c in Sources */,
+				B724B9B5FFEA3B0442351544 /* test-tcp-connect-error.c in Sources */,
+				D49CED3BB40CA8F67303C583 /* test-tcp-connect-timeout.c in Sources */,
+				78CDB78543219EE51406B90D /* test-tcp-connect6-error.c in Sources */,
+				BA6987F43D5B88D0D3CA1FB7 /* test-tcp-open.c in Sources */,
+				F115CCB8FEE96FE451EA7E4D /* test-tcp-write-to-half-open-connection.c in Sources */,
+				A96165C393B7EBB8CF8C8FBF /* test-tcp-write-after-connect.c in Sources */,
+				53A6D30BC500261328436A17 /* test-tcp-writealot.c in Sources */,
+				1139F4B9D76E6AA0CD8B2385 /* test-tcp-try-write.c in Sources */,
+				9A3B608F5A5AF2E1055D3ED9 /* test-tcp-unexpected-read.c in Sources */,
+				190CDEBAF4DA08BFABDC8A39 /* test-tcp-oob.c in Sources */,
+				47016C1261E1CCFB48F075CF /* test-tcp-read-stop.c in Sources */,
+				20172E71895154B43B096782 /* test-tcp-write-queue-order.c in Sources */,
+				2FA0BB4F8AFAA0E3FAFB9553 /* test-threadpool.c in Sources */,
+				4574A9271FB7106138E5A739 /* test-threadpool-cancel.c in Sources */,
+				1CFF95DEC3E465EB67D2BB10 /* test-thread-equal.c in Sources */,
+				1B0690438F8E164E0DAE662D /* test-mutexes.c in Sources */,
+				ADB63E6A516A78E72B113080 /* test-thread.c in Sources */,
+				B6A565813FC87325DDC14502 /* test-barrier.c in Sources */,
+				505551DBEE566E53E7A000B4 /* test-condvar.c in Sources */,
+				B9FB8648C9E10B46F4AB4BAA /* test-timer-again.c in Sources */,
+				FE7836EB79367A335292035B /* test-timer-from-check.c in Sources */,
+				58E3DB664205B469191E6972 /* test-timer.c in Sources */,
+				603C114C01C899B84AF6BFE8 /* test-tty.c in Sources */,
+				754F8C6202564910CA108B6E /* test-udp-bind.c in Sources */,
+				AC50DCA9CACEDC4102C0C23C /* test-udp-dgram-too-big.c in Sources */,
+				1C13B3770E63E87F0BF93235 /* test-udp-ipv6.c in Sources */,
+				260B18088AEA96E9C31E2A55 /* test-udp-open.c in Sources */,
+				D3BE05E3FB32F63CC73BB942 /* test-udp-options.c in Sources */,
+				E4CA3BF7EDE2E966DFF73577 /* test-udp-send-and-recv.c in Sources */,
+				4AB606C86D208C7484382AAF /* test-udp-send-immediate.c in Sources */,
+				35AAE5A0250C3A534C8B15F4 /* test-udp-send-unreachable.c in Sources */,
+				44585BB43002568273C0B328 /* test-udp-multicast-join.c in Sources */,
+				46348B844E09969F41788483 /* test-udp-multicast-join6.c in Sources */,
+				E01468E98690284BCE2C4EF6 /* test-dlerror.c in Sources */,
+				A6CD3366D4E10DE67AB41A63 /* test-udp-multicast-ttl.c in Sources */,
+				9EF465968C2FD000071F5EEE /* test-ip4-addr.c in Sources */,
+				CF526B0DC5272DDCC56CA208 /* test-udp-multicast-interface.c in Sources */,
+				D2EA9EFE91CD1314FC15EE28 /* test-udp-multicast-interface6.c in Sources */,
+				434713BC29C09B35BD87FE30 /* test-udp-try-send.c in Sources */,
+				9FFBD2835D9835A5239A250D /* runner-unix.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C2B766126B21EA9E789F2EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA387FA9D85B12FDF29C9ECF /* fs-poll.c in Sources */,
+				F6DE2B17E2B8CFB91050880B /* inet.c in Sources */,
+				A740B458760018C8B44109AE /* threadpool.c in Sources */,
+				76E2CCD79B7F486722D1CDF3 /* uv-common.c in Sources */,
+				A72F576DF7313E075C90978D /* version.c in Sources */,
+				A03743468D01132B0EA32CA1 /* async.c in Sources */,
+				F8B2FB24DD10199ED280C221 /* core.c in Sources */,
+				018026FFC3EB8167B25962B8 /* dl.c in Sources */,
+				9B0876F23C23B6ABD9137EFC /* fs.c in Sources */,
+				9C347A27FE7B0084C96D4CE7 /* getaddrinfo.c in Sources */,
+				D791B8B562E4C79D2135F089 /* getnameinfo.c in Sources */,
+				10DA6976693988A635871C61 /* loop.c in Sources */,
+				47E29CEAD3C86EF42CEBB7FD /* loop-watcher.c in Sources */,
+				D901414EB90C9C2D7935B534 /* pipe.c in Sources */,
+				DBB7A645F716845A451E7E19 /* poll.c in Sources */,
+				48BFE772CB17AB6555CD3377 /* process.c in Sources */,
+				CF1E51C7E7EBEB1DF015F568 /* signal.c in Sources */,
+				0A5E5CD2F956B1C7D0F96EED /* stream.c in Sources */,
+				84B0BC4763558DCAE8FE8EE5 /* tcp.c in Sources */,
+				54B449CE11D6E0A286AC6733 /* thread.c in Sources */,
+				93F64B6E315ADCC7E8CAB540 /* timer.c in Sources */,
+				83AC1183DBA58E62A5CC6AEF /* tty.c in Sources */,
+				651FA33D8D9246E832E77769 /* udp.c in Sources */,
+				283BD8EC9B99DA2BE366C375 /* proctitle.c in Sources */,
+				949DCA86744CB2857C0C58FA /* darwin.c in Sources */,
+				0C3D241EBDD307F85D563820 /* fsevents.c in Sources */,
+				84C36805A86B9254BC79BA3A /* darwin-proctitle.c in Sources */,
+				8DF0EA75CC818D455599B0E5 /* kqueue.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C38217403FE9A1EA2651E740 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				457BB886B16B0384963FB511 /* benchmark-async.c in Sources */,
+				1202C1EB0A101253B6A6C336 /* benchmark-async-pummel.c in Sources */,
+				52EB56A7A23C74FAF803F8CB /* benchmark-fs-stat.c in Sources */,
+				6536A3F55BB016CF70CA15C3 /* benchmark-getaddrinfo.c in Sources */,
+				DBA80FA0233D7CA7417D74B0 /* benchmark-loop-count.c in Sources */,
+				82180B27F41BA83017B8CBEE /* benchmark-million-async.c in Sources */,
+				2B3433A6BEA3528CBCBBFE7E /* benchmark-million-timers.c in Sources */,
+				49CF164FA8FBC9DDF7FDA7C0 /* benchmark-multi-accept.c in Sources */,
+				C8DBCCD7F663E23D90227347 /* benchmark-ping-pongs.c in Sources */,
+				312F0655CAC71C5A0EBE69CC /* benchmark-pound.c in Sources */,
+				DD33D1CB95C1BBAD952A7EFB /* benchmark-pump.c in Sources */,
+				06F8A0B44EA37CCCC83566BF /* benchmark-sizes.c in Sources */,
+				650BAAEBA5D976A422CD07DB /* benchmark-spawn.c in Sources */,
+				E99AB1BC3EA0CD077E1AD9C9 /* benchmark-thread.c in Sources */,
+				B6A18EBBBBDAFFA3FB0026B0 /* benchmark-tcp-write-batch.c in Sources */,
+				37ABDF5F7B62E7AC4B0745BE /* benchmark-udp-pummel.c in Sources */,
+				A29DA542CF363EE72A740435 /* dns-server.c in Sources */,
+				4A971CF7FFDD31CBA299D720 /* echo-server.c in Sources */,
+				489B0D98BB429495C658C718 /* blackhole-server.c in Sources */,
+				693C8925024FD22459E10FC0 /* run-benchmarks.c in Sources */,
+				8A189CFD8D1F87EE268F95FC /* runner.c in Sources */,
+				C0674D02FE3F680762121CA4 /* runner-unix.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6AA312E9C9D767599DC10FA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9233647E13A9525F991A21E /* run-tests */;
+			targetProxy = D14F3AB9F03F2BAE17DCC696 /* PBXContainerItemProxy */;
+		};
+		917ABF657662CB7B4E1A185B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 178071661CB321BB5A46AC92 /* libuv */;
+			targetProxy = 7B5C0D3558609EFA7885929F /* PBXContainerItemProxy */;
+		};
+		DFCEE91384FB383829C69B0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 178071661CB321BB5A46AC92 /* libuv */;
+			targetProxy = 04ED21EC7D0F0261F5BB9400 /* PBXContainerItemProxy */;
+		};
+		EC5EB1057A1DAFCDCA0EF249 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 178071661CB321BB5A46AC92 /* libuv */;
+			targetProxy = 53F005A90DE5A64FA96A61FB /* PBXContainerItemProxy */;
+		};
+		FB6419D8479D06EDB7EAD4F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A481575742DC2CA77987CD55 /* run-benchmarks */;
+			targetProxy = 4537704A156CA7358FD6D434 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03F083385161E62BD5E6A056 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					_GNU_SOURCE,
+					"_DARWIN_USE_64_BIT_INODE=1",
+				);
+				HEADER_SEARCH_PATHS = include;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-g",
+					"--std=gnu89",
+					"-pedantic",
+				);
+				PRODUCT_NAME = "run-tests";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Default;
+		};
+		19E0C09436AF887CB2DB6108 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = All;
+			};
+			name = Default;
+		};
+		8EBEE4B819DF62E97E0DE73F /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					_GNU_SOURCE,
+					"_DARWIN_USE_64_BIT_INODE=1",
+				);
+				HEADER_SEARCH_PATHS = include;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-g",
+					"--std=gnu89",
+					"-pedantic",
+				);
+				PRODUCT_NAME = "run-benchmarks";
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Default;
+		};
+		A99C1EF3080BAD852B8D3E92 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					"_DARWIN_USE_64_BIT_INODE=1",
+					"_DARWIN_UNLIMITED_SELECT=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					include,
+					src/,
+				);
+				OTHER_CFLAGS = (
+					"-g",
+					"--std=gnu89",
+					"-pedantic",
+				);
+				PRODUCT_NAME = uv;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+				);
+			};
+			name = Default;
+		};
+		B7C8814BFAEC393AB8AEFC9B /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		450E2E0DC03F33D0AC4940CE /* Build configuration list for PBXNativeTarget "run-benchmarks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EBEE4B819DF62E97E0DE73F /* Default */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Default;
+		};
+		4CDE5F6C5456C810EBDF1ABD /* Build configuration list for PBXNativeTarget "run-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03F083385161E62BD5E6A056 /* Default */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Default;
+		};
+		8C5C4470AE99DE5DE330356A /* Build configuration list for PBXProject "uv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7C8814BFAEC393AB8AEFC9B /* Default */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Default;
+		};
+		C25720DE719950FCE3D0A683 /* Build configuration list for PBXNativeTarget "libuv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A99C1EF3080BAD852B8D3E92 /* Default */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Default;
+		};
+		EB6C1E4AF282847509C3F777 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19E0C09436AF887CB2DB6108 /* Default */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36EC565658762C7175600AFC /* Project object */;
+}

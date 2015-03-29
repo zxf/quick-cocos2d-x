@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0427ADD34FEAEA853D5FA990 /* pr_msg.c in Sources */ = {isa = PBXBuildFile; fileRef = EE190493AADBB17FF4BDFAF1 /* pr_msg.c */; };
+		06B5011D0548EE8D99F893C2 /* pr_pkg.c in Sources */ = {isa = PBXBuildFile; fileRef = 0CF2789E0EDBC6B7F90765B7 /* pr_pkg.c */; };
+		24CCF1C63BF4E3B92B6E363E /* pc_trans.c in Sources */ = {isa = PBXBuildFile; fileRef = EA98E9833D3892875EC73031 /* pc_trans.c */; };
+		2542C316A529197261887681 /* tr_dummy.c in Sources */ = {isa = PBXBuildFile; fileRef = 1B5FA4BFCCD305A28C0B9049 /* tr_dummy.c */; };
+		36300C49F6F09F467D3B93AA /* tr_uv_tls_aux.c in Sources */ = {isa = PBXBuildFile; fileRef = D72DE8C81F064C236B4C78B9 /* tr_uv_tls_aux.c */; };
+		480FEBE356CB6A57A4FC8AFD /* tr_uv_tls.c in Sources */ = {isa = PBXBuildFile; fileRef = 99A17CF0FD07388D32D98CF3 /* tr_uv_tls.c */; };
+		5C74BE9995EAD3B21FA8D1D8 /* pb_util.c in Sources */ = {isa = PBXBuildFile; fileRef = CF5D68F8D59B3C384F43B3C7 /* pb_util.c */; };
+		5C840656860EECAC97BFAC83 /* tr_uv_tcp_aux.c in Sources */ = {isa = PBXBuildFile; fileRef = 3019116ACA04B0193690BC32 /* tr_uv_tcp_aux.c */; };
+		717D4CBB293698BC845C3984 /* pc_lib.c in Sources */ = {isa = PBXBuildFile; fileRef = D21C3122B6C6B268B046AEF7 /* pc_lib.c */; };
+		742B7E5BE475B86544AFE60B /* pc_trans_repo.c in Sources */ = {isa = PBXBuildFile; fileRef = A0053F518F8F7D270B0412C4 /* pc_trans_repo.c */; };
+		7C98BB3D6D99E89F17C057FF /* pc_pomelo.c in Sources */ = {isa = PBXBuildFile; fileRef = D431CB24B7674046796C32BC /* pc_pomelo.c */; };
+		90BD0FD47FDA9B1C3342B4D7 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 20CC26913FCF3F458A9143E1 /* pb_encode.c */; };
+		A06262E0F59CF41BC4C1974F /* tr_uv_tls_i.c in Sources */ = {isa = PBXBuildFile; fileRef = B94C84D2881FA8FB586B958A /* tr_uv_tls_i.c */; };
+		AD623CA36D5BB401F2A4C221 /* pr_msg_pb.c in Sources */ = {isa = PBXBuildFile; fileRef = BC5D9B769F82B687EC565C05 /* pr_msg_pb.c */; };
+		B858F301884D8F0A524BD141 /* tr_uv_tcp_i.c in Sources */ = {isa = PBXBuildFile; fileRef = EE29283DE5BBE2DFBCBABA55 /* tr_uv_tcp_i.c */; };
+		D6E16CED3F31784B908A27C0 /* tr_uv_tcp.c in Sources */ = {isa = PBXBuildFile; fileRef = A6C50EA22A74B59BC9D6176B /* tr_uv_tcp.c */; };
+		E35A1B2DA9B5513BD08B2BC2 /* pb_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A5F90FCD85315D7FF0DCB /* pb_decode.c */; };
+		F25ABFDB6350916D348C6683 /* pr_msg_json.c in Sources */ = {isa = PBXBuildFile; fileRef = 01FB2E06465E2F68AA0271B6 /* pr_msg_json.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60E5961374AFACA74B137439 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 776483E956142B97CB9A3724 /* jansson.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 59F286A69EC2A309743023EC;
+			remoteInfo = jansson;
+		};
+		68DFA1B21A5B66C0036E9953 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5DF9D4D2B037A2E97E054FD /* uv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1366FBDA3B41EA03E9CC86CA;
+			remoteInfo = libuv;
+		};
+		774F8D99B09A407B3A2C97EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF860C12839DB42D74918F38 /* openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5344D032AA9ACA94B2144BC7;
+			remoteInfo = "openssl-cli";
+		};
+		867BE86FB145A742547E8908 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF860C12839DB42D74918F38 /* openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F74C97A4930ACE0A652ECF70;
+			remoteInfo = openssl;
+		};
+		A2A3F50F12C494DEB02AB9A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5DF9D4D2B037A2E97E054FD /* uv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0F9AD78A28D4AB83078B4C46;
+			remoteInfo = "run-benchmarks";
+		};
+		FD4787FFAD9D26880E580E3B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5DF9D4D2B037A2E97E054FD /* uv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 64757BCA7335FEFCED9A25EC;
+			remoteInfo = "run-tests";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01FB2E06465E2F68AA0271B6 /* pr_msg_json.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pr_msg_json.c; sourceTree = "<group>"; };
+		0CF2789E0EDBC6B7F90765B7 /* pr_pkg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pr_pkg.c; sourceTree = "<group>"; };
+		0D1A5F90FCD85315D7FF0DCB /* pb_decode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pb_decode.c; sourceTree = "<group>"; };
+		1B5FA4BFCCD305A28C0B9049 /* tr_dummy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tr_dummy.c; sourceTree = "<group>"; };
+		20CC26913FCF3F458A9143E1 /* pb_encode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pb_encode.c; sourceTree = "<group>"; };
+		3019116ACA04B0193690BC32 /* tr_uv_tcp_aux.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tr_uv_tcp_aux.c; sourceTree = "<group>"; };
+		55556D5804B6E2EABD6288DA /* test-tr_tls.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tr_tls.c"; sourceTree = "<group>"; };
+		62F0DEA8E45833ABE17C7E9B /* libpomelo2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpomelo2.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		74251F2188A6E561B93FB3D6 /* test-tr_tcp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tr_tcp.c"; sourceTree = "<group>"; };
+		776483E956142B97CB9A3724 /* jansson.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = jansson.xcodeproj; path = deps/jansson/jansson.xcodeproj; sourceTree = SOURCE_ROOT; };
+		91331A4C5B3CAAFD66B08AF9 /* pomelo.gyp */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = pomelo.gyp; sourceTree = "<group>"; };
+		99A17CF0FD07388D32D98CF3 /* tr_uv_tls.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tr_uv_tls.c; sourceTree = "<group>"; };
+		A0053F518F8F7D270B0412C4 /* pc_trans_repo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pc_trans_repo.c; sourceTree = "<group>"; };
+		A6C50EA22A74B59BC9D6176B /* tr_uv_tcp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tr_uv_tcp.c; sourceTree = "<group>"; };
+		B94C84D2881FA8FB586B958A /* tr_uv_tls_i.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tr_uv_tls_i.c; sourceTree = "<group>"; };
+		BC5D9B769F82B687EC565C05 /* pr_msg_pb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pr_msg_pb.c; sourceTree = "<group>"; };
+		C5DF9D4D2B037A2E97E054FD /* uv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = uv.xcodeproj; path = deps/uv/uv.xcodeproj; sourceTree = SOURCE_ROOT; };
+		CE3D9D957938AAB4ECC2C2AD /* -lm */ = {isa = PBXFileReference; lastKnownFileType = text; path = "-lm"; sourceTree = "<group>"; };
+		CF5D68F8D59B3C384F43B3C7 /* pb_util.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pb_util.c; sourceTree = "<group>"; };
+		CF860C12839DB42D74918F38 /* openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openssl.xcodeproj; path = deps/openssl/openssl.xcodeproj; sourceTree = SOURCE_ROOT; };
+		D21C3122B6C6B268B046AEF7 /* pc_lib.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pc_lib.c; sourceTree = "<group>"; };
+		D431CB24B7674046796C32BC /* pc_pomelo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pc_pomelo.c; sourceTree = "<group>"; };
+		D72DE8C81F064C236B4C78B9 /* tr_uv_tls_aux.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tr_uv_tls_aux.c; sourceTree = "<group>"; };
+		DCA161FECB262D431968B6DB /* test-tr_dummy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "test-tr_dummy.c"; sourceTree = "<group>"; };
+		EA98E9833D3892875EC73031 /* pc_trans.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pc_trans.c; sourceTree = "<group>"; };
+		EE190493AADBB17FF4BDFAF1 /* pr_msg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = pr_msg.c; sourceTree = "<group>"; };
+		EE29283DE5BBE2DFBCBABA55 /* tr_uv_tcp_i.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = tr_uv_tcp_i.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E75073767393FA28718BBB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02CAD9C2293F8EE7D9025BC0 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				776483E956142B97CB9A3724 /* jansson.xcodeproj */,
+				CF860C12839DB42D74918F38 /* openssl.xcodeproj */,
+				C5DF9D4D2B037A2E97E054FD /* uv.xcodeproj */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		396258016E9F119595253C5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62F0DEA8E45833ABE17C7E9B /* libpomelo2.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		595276D05058B08F60D49FA3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				828524169865F6C92236E7A1 /* src */,
+				D4212D3134A1587B4B3DF0F8 /* test */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		65B5C535AA92FBC86107E524 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED6ADD425B0036DEE678188C /* libuv.a */,
+				E6F3A680B1C537F7FE1D9991 /* run-tests */,
+				260B217613B0ABF65235BBEA /* run-benchmarks */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82331131982F91DF7E97283B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				769099B9C096EAD79B634202 /* libjansson.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		828524169865F6C92236E7A1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D87BEB213F4626859971D307 /* tr */,
+				D21C3122B6C6B268B046AEF7 /* pc_lib.c */,
+				D431CB24B7674046796C32BC /* pc_pomelo.c */,
+				EA98E9833D3892875EC73031 /* pc_trans.c */,
+				A0053F518F8F7D270B0412C4 /* pc_trans_repo.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		9AB802B617CF1B6C4941C33A /* dummy */ = {
+			isa = PBXGroup;
+			children = (
+				1B5FA4BFCCD305A28C0B9049 /* tr_dummy.c */,
+			);
+			path = dummy;
+			sourceTree = "<group>";
+		};
+		BADFDA9923828CF4A18F9F67 = {
+			isa = PBXGroup;
+			children = (
+				595276D05058B08F60D49FA3 /* Source */,
+				02CAD9C2293F8EE7D9025BC0 /* Projects */,
+				F6A26440FC62333FC8A41E4E /* Frameworks */,
+				396258016E9F119595253C5F /* Products */,
+				C2CD93A73B63EF926207EC38 /* Build */,
+			);
+			sourceTree = "<group>";
+		};
+		C2CD93A73B63EF926207EC38 /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				91331A4C5B3CAAFD66B08AF9 /* pomelo.gyp */,
+			);
+			name = Build;
+			sourceTree = "<group>";
+		};
+		D4212D3134A1587B4B3DF0F8 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				DCA161FECB262D431968B6DB /* test-tr_dummy.c */,
+				74251F2188A6E561B93FB3D6 /* test-tr_tcp.c */,
+				55556D5804B6E2EABD6288DA /* test-tr_tls.c */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		D87BEB213F4626859971D307 /* tr */ = {
+			isa = PBXGroup;
+			children = (
+				9AB802B617CF1B6C4941C33A /* dummy */,
+				F6356B58E034D31B0010A0DA /* uv */,
+			);
+			path = tr;
+			sourceTree = "<group>";
+		};
+		F6356B58E034D31B0010A0DA /* uv */ = {
+			isa = PBXGroup;
+			children = (
+				0D1A5F90FCD85315D7FF0DCB /* pb_decode.c */,
+				20CC26913FCF3F458A9143E1 /* pb_encode.c */,
+				CF5D68F8D59B3C384F43B3C7 /* pb_util.c */,
+				EE190493AADBB17FF4BDFAF1 /* pr_msg.c */,
+				01FB2E06465E2F68AA0271B6 /* pr_msg_json.c */,
+				BC5D9B769F82B687EC565C05 /* pr_msg_pb.c */,
+				0CF2789E0EDBC6B7F90765B7 /* pr_pkg.c */,
+				A6C50EA22A74B59BC9D6176B /* tr_uv_tcp.c */,
+				3019116ACA04B0193690BC32 /* tr_uv_tcp_aux.c */,
+				EE29283DE5BBE2DFBCBABA55 /* tr_uv_tcp_i.c */,
+				99A17CF0FD07388D32D98CF3 /* tr_uv_tls.c */,
+				D72DE8C81F064C236B4C78B9 /* tr_uv_tls_aux.c */,
+				B94C84D2881FA8FB586B958A /* tr_uv_tls_i.c */,
+			);
+			path = uv;
+			sourceTree = "<group>";
+		};
+		F6A26440FC62333FC8A41E4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE3D9D957938AAB4ECC2C2AD /* -lm */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBC0ED1938CFB6E16055C5BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10DC97970611A9A5438E1F67 /* libopenssl.a */,
+				2F5603DD49311246B13DD227 /* openssl-cli */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A43BE8C37C089000CACAC46 /* libpomelo2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2EB6722E4C00602EA209B7F /* Build configuration list for PBXNativeTarget "libpomelo2" */;
+			buildPhases = (
+				35B754782463823ACF78701E /* Sources */,
+				0E75073767393FA28718BBB4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libpomelo2;
+			productName = pomelo2;
+			productReference = 62F0DEA8E45833ABE17C7E9B /* libpomelo2.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB04EA159A88EB1C62BF850F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 8507625DC7EBB8838C0F9137 /* Build configuration list for PBXProject "pomelo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BADFDA9923828CF4A18F9F67;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 82331131982F91DF7E97283B /* Products */;
+					ProjectRef = 776483E956142B97CB9A3724 /* jansson.xcodeproj */;
+				},
+				{
+					ProductGroup = FBC0ED1938CFB6E16055C5BF /* Products */;
+					ProjectRef = CF860C12839DB42D74918F38 /* openssl.xcodeproj */;
+				},
+				{
+					ProductGroup = 65B5C535AA92FBC86107E524 /* Products */;
+					ProjectRef = C5DF9D4D2B037A2E97E054FD /* uv.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				3A43BE8C37C089000CACAC46 /* libpomelo2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		10DC97970611A9A5438E1F67 /* libopenssl.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libopenssl.a;
+			remoteRef = 867BE86FB145A742547E8908 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		260B217613B0ABF65235BBEA /* run-benchmarks */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "run-benchmarks";
+			remoteRef = A2A3F50F12C494DEB02AB9A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2F5603DD49311246B13DD227 /* openssl-cli */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "openssl-cli";
+			remoteRef = 774F8D99B09A407B3A2C97EF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		769099B9C096EAD79B634202 /* libjansson.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjansson.a;
+			remoteRef = 60E5961374AFACA74B137439 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E6F3A680B1C537F7FE1D9991 /* run-tests */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "run-tests";
+			remoteRef = FD4787FFAD9D26880E580E3B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED6ADD425B0036DEE678188C /* libuv.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libuv.a;
+			remoteRef = 68DFA1B21A5B66C0036E9953 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		35B754782463823ACF78701E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C98BB3D6D99E89F17C057FF /* pc_pomelo.c in Sources */,
+				717D4CBB293698BC845C3984 /* pc_lib.c in Sources */,
+				24CCF1C63BF4E3B92B6E363E /* pc_trans.c in Sources */,
+				742B7E5BE475B86544AFE60B /* pc_trans_repo.c in Sources */,
+				2542C316A529197261887681 /* tr_dummy.c in Sources */,
+				0427ADD34FEAEA853D5FA990 /* pr_msg.c in Sources */,
+				AD623CA36D5BB401F2A4C221 /* pr_msg_pb.c in Sources */,
+				F25ABFDB6350916D348C6683 /* pr_msg_json.c in Sources */,
+				5C74BE9995EAD3B21FA8D1D8 /* pb_util.c in Sources */,
+				E35A1B2DA9B5513BD08B2BC2 /* pb_decode.c in Sources */,
+				90BD0FD47FDA9B1C3342B4D7 /* pb_encode.c in Sources */,
+				06B5011D0548EE8D99F893C2 /* pr_pkg.c in Sources */,
+				D6E16CED3F31784B908A27C0 /* tr_uv_tcp.c in Sources */,
+				B858F301884D8F0A524BD141 /* tr_uv_tcp_i.c in Sources */,
+				5C840656860EECAC97BFAC83 /* tr_uv_tcp_aux.c in Sources */,
+				480FEBE356CB6A57A4FC8AFD /* tr_uv_tls.c in Sources */,
+				A06262E0F59CF41BC4C1974F /* tr_uv_tls_i.c in Sources */,
+				36300C49F6F09F467D3B93AA /* tr_uv_tls_aux.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8DF114BE4D4C552186187042 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+			};
+			name = Default;
+		};
+		F77C8E4A983DA2E8CC86A7D4 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					_GNU_SOURCE,
+					_LARGEFILE_SOURCE,
+					"_FILE_OFFSET_BITS=64",
+					"_DARWIN_USE_64_BIT_INODE=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					./deps/jansson/src,
+					./deps/uv/include,
+					./deps/openssl/openssl/include,
+					./include,
+					./src,
+					deps/uv/include,
+					deps/openssl/openssl/include,
+				);
+				PRODUCT_NAME = pomelo2;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8507625DC7EBB8838C0F9137 /* Build configuration list for PBXProject "pomelo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DF114BE4D4C552186187042 /* Default */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Default;
+		};
+		E2EB6722E4C00602EA209B7F /* Build configuration list for PBXNativeTarget "libpomelo2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F77C8E4A983DA2E8CC86A7D4 /* Default */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB04EA159A88EB1C62BF850F /* Project object */;
+}

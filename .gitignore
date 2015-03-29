@@ -34,6 +34,7 @@ lib/cocos2d-x/cocos2dx/platform/android/java/gen
 */*/proj.win32/Debug.win32/
 */*/proj.win32/Release.win32/
 Debug.win32
+Debug.mac
 runtime
 
 player/build-*-Debug/
