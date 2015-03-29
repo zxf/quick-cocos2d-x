@@ -59,8 +59,53 @@ if not pomelo then
   end
 
   function pomelo.Client:init(use_tls, enable_poll, lc_callback)
-      self._internal_data = luapomelo.create(use_tls, enable_poll, lc_callback);
+      self._internal_data = luapomelo.create(use_tls, enable_poll, lc_callback)
       return self._internal_data == nil
+  end
+
+  function pomelo.Client:connect(host, port)
+      return luapomelo.connect(self._internal_data, host, port)
+  end
+
+  function pomelo.Client:state()
+      return luapomelo.state(self._internal_data)
+  end
+
+  function pomelo.Client:add_ev_handler(handler)
+      return luapomelo.add_ev_handler(self._internal_data, handler)
+  end
+
+  function pomelo.Client:rm_ev_handler(handler_id)
+      return luapomelo.rm_ev_handler(self._internal_data, handler_id)
+  end
+
+  function pomelo.Client:request(route, msg, timeout, req_cb)
+      return luapomelo.request(self._internal_data, route, msg, timeout, req_cb)
+  end
+
+  function pomelo.Client:notify(route, msg, timeout, notify_cb)
+      return luapomelo.notify(self._internal_data, route, msg, timeout, notify_cb)
+  end
+
+  function pomelo.Client:poll()
+      return luapomelo.poll(self._internal_data)
+  end
+
+  function pomelo.Client:quality()
+      return luapomelo.quality(self._internal_data)
+  end
+
+  function pomelo.Client:disconnect()
+      return luapomelo.disconnect(self._internal_data)
+  end
+
+  function pomelo.Client:destroy()
+      if luapomelo.destroy(self._internal_data) == Client.PC_RC_OK then
+        self._internal_data = nil
+        return true
+      else
+        return false
+      end
   end
 end
 
