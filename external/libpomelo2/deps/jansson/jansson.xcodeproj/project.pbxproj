@@ -120,7 +120,11 @@
 			};
 			buildConfigurationList = C635156A5F194EA1CB9516A7 /* Build configuration list for PBXProject "jansson" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = C8361E6324843A60143DB40A;
 			projectDirPath = "";
 			projectRoot = "";
@@ -152,7 +156,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1DA261209EEA4CE0DF72FF16 /* Default */ = {
+		1DA261209EEA4CE0DF72FF16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
@@ -163,15 +167,19 @@
 				HEADER_SEARCH_PATHS = ./src;
 				PRODUCT_NAME = jansson;
 			};
-			name = Default;
+			name = Debug;
 		};
-		4F5020B0C0B824B12FA37E73 /* Default */ = {
+		4F5020B0C0B824B12FA37E73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME).mac";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME).mac";
 				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SDKROOT = macosx;
 				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = "$(SRCROOT)";
 			};
-			name = Default;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -179,18 +187,18 @@
 		C635156A5F194EA1CB9516A7 /* Build configuration list for PBXProject "jansson" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F5020B0C0B824B12FA37E73 /* Default */,
+				4F5020B0C0B824B12FA37E73 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		F13B635E2AABF08FB8A00924 /* Build configuration list for PBXNativeTarget "jansson" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DA261209EEA4CE0DF72FF16 /* Default */,
+				1DA261209EEA4CE0DF72FF16 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

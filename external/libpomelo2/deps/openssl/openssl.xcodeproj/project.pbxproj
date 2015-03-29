@@ -2695,7 +2695,11 @@
 			};
 			buildConfigurationList = B123F66A58A8DA3F19C2C034 /* Build configuration list for PBXProject "openssl" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = DA9C07F6C49F45D436242DC2;
 			projectDirPath = "";
 			projectRoot = "";
@@ -3434,22 +3438,26 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		510F710A20F74CC4502EBCDB /* Default */ = {
+		510F710A20F74CC4502EBCDB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME).mac";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME).mac";
 				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SDKROOT = macosx;
 				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = "$(SRCROOT)";
 			};
-			name = Default;
+			name = Debug;
 		};
-		CC505E568F8DF4650F9D0855 /* Default */ = {
+		CC505E568F8DF4650F9D0855 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = All;
 			};
-			name = Default;
+			name = Debug;
 		};
-		CD0C802C73E52C4E841AF31C /* Default */ = {
+		CD0C802C73E52C4E841AF31C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
@@ -3478,9 +3486,9 @@
 				);
 				PRODUCT_NAME = openssl;
 			};
-			name = Default;
+			name = Debug;
 		};
-		CD7A45A672F8ACB7E21974E9 /* Default */ = {
+		CD7A45A672F8ACB7E21974E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = "";
@@ -3507,7 +3515,7 @@
 				);
 				PRODUCT_NAME = "openssl-cli";
 			};
-			name = Default;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -3515,34 +3523,34 @@
 		04A3BB038FA38722E3CA4E94 /* Build configuration list for PBXNativeTarget "openssl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD0C802C73E52C4E841AF31C /* Default */,
+				CD0C802C73E52C4E841AF31C /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		2267B01B6CBD49717A216392 /* Build configuration list for PBXNativeTarget "openssl-cli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD7A45A672F8ACB7E21974E9 /* Default */,
+				CD7A45A672F8ACB7E21974E9 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		B123F66A58A8DA3F19C2C034 /* Build configuration list for PBXProject "openssl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				510F710A20F74CC4502EBCDB /* Default */,
+				510F710A20F74CC4502EBCDB /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		F5A128D1762E5204FE7500CA /* Build configuration list for PBXAggregateTarget "All" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC505E568F8DF4650F9D0855 /* Default */,
+				CC505E568F8DF4650F9D0855 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

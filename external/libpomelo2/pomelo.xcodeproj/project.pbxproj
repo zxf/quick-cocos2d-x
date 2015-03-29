@@ -28,6 +28,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		163F06031AC7E67F00894957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF860C12839DB42D74918F38 /* openssl.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E53F90E6C0DABF34DAEBCE16;
+			remoteInfo = openssl;
+		};
+		163F06051AC7E68300894957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C5DF9D4D2B037A2E97E054FD /* uv.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 178071661CB321BB5A46AC92;
+			remoteInfo = libuv;
+		};
+		163F060D1AC7EA2200894957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 776483E956142B97CB9A3724 /* jansson.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A42BD6BC281DD5AD92086C4D;
+			remoteInfo = jansson;
+		};
 		60E5961374AFACA74B137439 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 776483E956142B97CB9A3724 /* jansson.xcodeproj */;
@@ -266,6 +287,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				163F060E1AC7EA2200894957 /* PBXTargetDependency */,
+				163F06061AC7E68300894957 /* PBXTargetDependency */,
+				163F06041AC7E67F00894957 /* PBXTargetDependency */,
 			);
 			name = libpomelo2;
 			productName = pomelo2;
@@ -383,18 +407,38 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		163F06041AC7E67F00894957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openssl;
+			targetProxy = 163F06031AC7E67F00894957 /* PBXContainerItemProxy */;
+		};
+		163F06061AC7E68300894957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libuv;
+			targetProxy = 163F06051AC7E68300894957 /* PBXContainerItemProxy */;
+		};
+		163F060E1AC7EA2200894957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = jansson;
+			targetProxy = 163F060D1AC7EA2200894957 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		8DF114BE4D4C552186187042 /* Default */ = {
+		8DF114BE4D4C552186187042 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
 				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
 			};
-			name = Default;
+			name = Debug;
 		};
-		F77C8E4A983DA2E8CC86A7D4 /* Default */ = {
+		F77C8E4A983DA2E8CC86A7D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME).mac";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME).mac";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					_GNU_SOURCE,
@@ -411,9 +455,12 @@
 					deps/uv/include,
 					deps/openssl/openssl/include,
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = pomelo2;
+				SDKROOT = macosx;
+				SYMROOT = "$(SRCROOT)";
 			};
-			name = Default;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -421,18 +468,18 @@
 		8507625DC7EBB8838C0F9137 /* Build configuration list for PBXProject "pomelo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8DF114BE4D4C552186187042 /* Default */,
+				8DF114BE4D4C552186187042 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		E2EB6722E4C00602EA209B7F /* Build configuration list for PBXNativeTarget "libpomelo2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F77C8E4A983DA2E8CC86A7D4 /* Default */,
+				F77C8E4A983DA2E8CC86A7D4 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

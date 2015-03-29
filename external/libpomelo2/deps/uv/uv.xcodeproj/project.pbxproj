@@ -787,7 +787,11 @@
 			};
 			buildConfigurationList = 8C5C4470AE99DE5DE330356A /* Build configuration list for PBXProject "uv" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 9441FFEF004DB5FD3E72FDB0;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1022,7 +1026,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		03F083385161E62BD5E6A056 /* Default */ = {
+		03F083385161E62BD5E6A056 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = "";
@@ -1046,16 +1050,16 @@
 					"-Wno-unused-parameter",
 				);
 			};
-			name = Default;
+			name = Debug;
 		};
-		19E0C09436AF887CB2DB6108 /* Default */ = {
+		19E0C09436AF887CB2DB6108 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = All;
 			};
-			name = Default;
+			name = Debug;
 		};
-		8EBEE4B819DF62E97E0DE73F /* Default */ = {
+		8EBEE4B819DF62E97E0DE73F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = "";
@@ -1079,9 +1083,9 @@
 					"-Wno-unused-parameter",
 				);
 			};
-			name = Default;
+			name = Debug;
 		};
-		A99C1EF3080BAD852B8D3E92 /* Default */ = {
+		A99C1EF3080BAD852B8D3E92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
@@ -1107,15 +1111,19 @@
 					"-Wno-unused-parameter",
 				);
 			};
-			name = Default;
+			name = Debug;
 		};
-		B7C8814BFAEC393AB8AEFC9B /* Default */ = {
+		B7C8814BFAEC393AB8AEFC9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME).mac";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_TEMP_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME).mac";
 				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SDKROOT = macosx;
 				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = "$(SRCROOT)";
 			};
-			name = Default;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -1123,42 +1131,42 @@
 		450E2E0DC03F33D0AC4940CE /* Build configuration list for PBXNativeTarget "run-benchmarks" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8EBEE4B819DF62E97E0DE73F /* Default */,
+				8EBEE4B819DF62E97E0DE73F /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		4CDE5F6C5456C810EBDF1ABD /* Build configuration list for PBXNativeTarget "run-tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				03F083385161E62BD5E6A056 /* Default */,
+				03F083385161E62BD5E6A056 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		8C5C4470AE99DE5DE330356A /* Build configuration list for PBXProject "uv" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7C8814BFAEC393AB8AEFC9B /* Default */,
+				B7C8814BFAEC393AB8AEFC9B /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		C25720DE719950FCE3D0A683 /* Build configuration list for PBXNativeTarget "libuv" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A99C1EF3080BAD852B8D3E92 /* Default */,
+				A99C1EF3080BAD852B8D3E92 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		EB6C1E4AF282847509C3F777 /* Build configuration list for PBXAggregateTarget "All" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				19E0C09436AF887CB2DB6108 /* Default */,
+				19E0C09436AF887CB2DB6108 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 1;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
