@@ -243,7 +243,7 @@ int pc_client_cleanup(pc_client_t* client)
         pc_lib_log(PC_LOG_INFO, "pc_client_cleanup - client has not been inited");
         return PC_RC_OK;
     }
-
+	
     assert(client->trans && client->trans->cleanup);
 
     /*
@@ -252,7 +252,9 @@ int pc_client_cleanup(pc_client_t* client)
      *
      * transport->cleanup may be blocking.
      */
+
     ret = client->trans->cleanup(client->trans);
+
     if (ret != PC_RC_OK) {
         pc_lib_log(PC_LOG_ERROR, "pc_client_cleanup - transport cleanup error: %s", pc_client_rc_str(ret));
         return ret;

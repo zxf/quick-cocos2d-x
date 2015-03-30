@@ -1,0 +1,219 @@
+require("luapomelo")
+
+--[[
+--example
+local json = require("framework.json")
+
+local storage = {
+}
+
+pomelo.lib_init(pomelo.PC_LOG_WARN, nil, nil)
+local client = pomelo.Client.new()
+
+client:init(true, false, function(op, data)
+if op == pomelo.PC_LOCAL_STORAGE_OP_WRITE then
+storage = json.decode(data)
+return 0
+else
+return json.encode(storage)
+end
+end)
+
+local handler_id = client:add_ev_handler(function(ev, arg1, arg2)
+if ev == Client.PC_EV_USER_DEFINED_PUSH then
+print('get push message, route: ', arg1, 'msg: ', arg2)
+else
+print('network event:', pomelo.ev_to_str(ev), arg1, arg2)
+end
+end)
+
+
+client:connect('127.0.0.1', 3011)
+
+client:request('connector.entryHandler.entry', '{"name": "test"}', 10, function()
+print('request status: ', pomelo.rc_to_str(rc), 'resp:', resp)
+end);
+
+client:notify('test.testHandler.notify', '{"content": "test content"}', 10, function()
+print('notify status: ', pomelo.rc_to_str(rc))
+end)
+
+client:rm_ev_handler(handler_id)
+
+client:destroy()
+
+pomelo.lib_cleanup()
+]]
+if not pomelo then 
+    pomelo = {
+        PC_LOCAL_STORAGE_OP_READ = 0,
+        PC_LOCAL_STORAGE_OP_WRITE = 1,
+
+        PC_RC_OK = 0,
+        PC_RC_ERROR = -1,
+        PC_RC_TIMEOUT = -2,
+        PC_RC_INVALID_JSON = -3,
+        PC_RC_INVALID_ARG = -4,
+        PC_RC_NO_TRANS = -5,
+        PC_RC_INVALID_THREAD = -6,
+        PC_RC_TRANS_ERROR = -7,
+        PC_RC_INVALID_ROUTE = -8,
+        PC_RC_INVALID_STATE = -9,
+        PC_RC_NOT_FOUND = -10,
+        PC_RC_RESET = -11,
+
+        PC_ST_NOT_INITED = 0,
+        PC_ST_INITED = 1,
+        PC_ST_CONNECTING = 2,
+        PC_ST_CONNECTED = 3,
+        PC_ST_DISCONNECTING = 4,
+        PC_ST_UNKNOWN = 5,
+
+        PC_LOG_DEBUG = 0,
+        PC_LOG_INFO = 1,
+        PC_LOG_WARN = 2,
+        PC_LOG_ERROR = 3,
+        PC_LOG_DISABLE = 4,
+
+        PC_EV_USER_DEFINED_PUSH = 0,
+        PC_EV_CONNECTED = 1,
+        PC_EV_CONNECT_ERROR = 2,
+        PC_EV_CONNECT_FAILED = 3,
+        PC_EV_DISCONNECT = 4,
+        PC_EV_KICKED_BY_SERVER = 5,
+        PC_EV_UNEXPECTED_DISCONNECT = 6,
+        PC_EV_PROTO_ERROR = 7,
+
+        PC_EV_INVALID_HANDLER_ID = -1,
+
+        PC_WITHOUT_TIMEOUT = -1,
+    }
+
+    local _lib_init = false
+
+    function pomelo.lib_cleanup()
+        local ret = 0
+        if _lib_init then
+            ret = luapomelo.lib_cleanup() 
+            _lib_init = false
+        end
+        return ret
+    end
+
+    function pomelo.lib_init(log_level, ca_file, ca_path)
+        if _lib_init then
+            pomelo.lib_cleanup()
+        end
+        local ret = luapomelo.lib_init(log_level, ca_file, ca_path) 
+        _lib_init = true
+        return ret
+    end
+
+
+    pomelo.lib_cleanup = luapomelo.lib_cleanup
+    pomelo.ev_to_str = luapomelo.ev_to_str
+    pomelo.rc_to_str = luapomelo.rc_to_str
+    pomelo.state_to_str = luapomelo.state_to_str
+
+    pomelo.Client = class("Client")
+
+    function pomelo.Client:ctor()
+        if not _lib_init then
+            pomelo.lib_init(pomelo.PC_LOG_WARN, nil, nil)
+        end
+        self._internal_data = nil
+    end
+
+    function pomelo.Client:init(use_tls, enable_poll, lc_callback)
+        self._internal_data = luapomelo.create(use_tls, enable_poll, lc_callback)
+        local ret = self._internal_data == nil
+        if not ret then
+            print("Pomelo client init.")
+        end
+        return ret
+    end
+
+    function pomelo.Client:connect(host, port)
+        if self._internal_data then
+            return luapomelo.connect(self._internal_data, host, port)
+        else
+            return nil
+        end
+    end
+
+    function pomelo.Client:state()
+        if self._internal_data then
+            return luapomelo.state(self._internal_data)
+        else
+            return nil
+        end
+    end
+
+    function pomelo.Client:add_ev_handler(handler)
+        if self._internal_data then
+            return luapomelo.add_ev_handler(self._internal_data, handler)
+        else
+            return nil
+        end
+    end
+
+    function pomelo.Client:rm_ev_handler(handler_id)
+        if self._internal_data then
+            return luapomelo.rm_ev_handler(self._internal_data, handler_id)
+        else
+            return nil
+        end
+    end
+
+    function pomelo.Client:request(route, msg, timeout, req_cb)
+        if self._internal_data then
+            return luapomelo.request(self._internal_data, route, msg, timeout, req_cb)
+        else
+            return nil
+        end
+    end
+
+    function pomelo.Client:notify(route, msg, timeout, notify_cb)
+        if self._internal_data then
+            return luapomelo.notify(self._internal_data, route, msg, timeout, notify_cb)
+        else
+            return nil
+        end
+    end
+
+    function pomelo.Client:poll()
+        if self._internal_data then
+            return luapomelo.poll(self._internal_data)
+        else
+            return nil
+        end
+    end
+
+    function pomelo.Client:quality()
+        if self._internal_data then
+            return luapomelo.quality(self._internal_data)
+        else
+            return nil
+        end
+    end
+
+    function pomelo.Client:disconnect()
+        if self._internal_data then
+            return luapomelo.disconnect(self._internal_data)
+        else
+            return nil
+        end
+    end
+
+    function pomelo.Client:destroy()
+        if self._internal_data and luapomelo.destroy(self._internal_data) == pomelo.PC_RC_OK then
+            self._internal_data = nil
+            return true
+        else
+            return false
+        end
+    end
+end
+
+return pomelo
+
