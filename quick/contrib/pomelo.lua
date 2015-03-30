@@ -45,8 +45,19 @@ if not pomelo then
     PC_WITHOUT_TIMEOUT = -1,
   }
 
+  local _lib_init = false
 
-  pomelo.lib_init = luapomelo.lib_init
+  function pomelo.lib_init(log_level, ca_file, ca_path)
+    local ret = luapomelo.lib_init(log_level, ca_file, ca_path) 
+    _lib_init = true
+    return ret
+  end
+
+  function pomelo.lib_cleanup()
+    local ret = luapomelo.lib_cleanup() 
+    _lib_init = false
+    return ret
+  end
   pomelo.lib_cleanup = luapomelo.lib_cleanup
   pomelo.ev_to_str = luapomelo.ev_to_str
   pomelo.rc_to_str = luapomelo.rc_to_str
@@ -55,6 +66,9 @@ if not pomelo then
   pomelo.Client = class("Client")
 
   function pomelo.Client:ctor()
+    if not _lib_init then
+      pomelo.lib_init(pomelo.PC_LOG_WARN, nil, nil)
+    end
     self._internal_data = nil
   end
 

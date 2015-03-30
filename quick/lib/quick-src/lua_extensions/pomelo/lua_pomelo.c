@@ -215,19 +215,11 @@ static int lib_init(lua_State* L) {
     const char* ca_file = NULL;
     const char* ca_path = NULL;
     log_level = luaL_checkinteger(L, 1);
-    if(lua_gettop(L) > 0){
-        if(lua_isnil(L, 1)){
-            lua_remove(L, 1);
-        } else {
-            ca_file = luaL_checkstring(L, 1);
-        }
+    if(!lua_isnil(L, 2)){
+        ca_file = luaL_checkstring(L, 2);
     }
-    if(lua_gettop(L) > 0){
-        if(lua_isnil(L, 1)){
-            lua_remove(L, 1);
-        } else {
-            ca_path = luaL_checkstring(L, 1);
-        }
+    if(!lua_isnil(L, 3)){
+        ca_path = luaL_checkstring(L, 3);
     }
 #if !defined(PC_NO_UV_TLS_TRANS)
     if (ca_file || ca_path) {

@@ -10,6 +10,7 @@
 *.so
 *.o
 *.log
+node_models
 
 project.xcworkspace/
 xcuserdata/
