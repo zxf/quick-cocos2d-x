@@ -453,6 +453,9 @@
     <ClInclude Include="..\..\lib\quick-src\lua_extensions\pomelo\lua_pomelo.h">
       <Filter>Classes\quick-src\lua_extensions\pomelo</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\lib\quick-src\lua_extensions\pomelo\lpomelo.h">
+      <Filter>Classes\quick-src\lua_extensions\pomelo</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
@@ -735,6 +738,9 @@
       <Filter>Classes\runtime</Filter>
     </ClCompile>
     <ClCompile Include="..\..\lib\quick-src\lua_extensions\pomelo\lua_pomelo.c">
+      <Filter>Classes\quick-src\lua_extensions\pomelo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\lib\quick-src\lua_extensions\pomelo\lpomelo.c">
       <Filter>Classes\quick-src\lua_extensions\pomelo</Filter>
     </ClCompile>
   </ItemGroup>

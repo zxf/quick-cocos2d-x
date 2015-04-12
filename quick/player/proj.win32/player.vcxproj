@@ -68,7 +68,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\Classes;$(ProjectDir)..\Classes\runtime;$(ProjectDir)..\..\lib\quick-src;$(ProjectDir)..\..\lib\quick-src\extra;$(EngineRoot)external\protobuf-lite\win32;$(EngineRoot)external\protobuf-lite\src;$(EngineRoot)external\win32-specific\zlib\include;$(EngineRoot)cocos\scripting\lua-bindings\auto;$(EngineRoot)cocos\scripting\lua-bindings\manual;$(EngineRoot)cocos\audio\include;$(EngineRoot)external;$(EngineRoot)external\lua\lua;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;$(EngineRoot);$(EngineRoot)external\curl\include\win32;$(EngineRoot)external\glfw3\include\win32;$(EngineRoot)external\libpomelo2\include;$(EngineRoot)external\libpomelo2\deps\openssl\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Classes;$(ProjectDir)..\Classes\runtime;$(ProjectDir)..\..\lib\quick-src;$(ProjectDir)..\..\lib\quick-src\extra;$(EngineRoot)external\protobuf-lite\win32;$(EngineRoot)external\protobuf-lite\src;$(EngineRoot)external\win32-specific\zlib\include;$(EngineRoot)cocos\scripting\lua-bindings\auto;$(EngineRoot)cocos\scripting\lua-bindings\manual;$(EngineRoot)cocos\audio\include;$(EngineRoot)external;$(EngineRoot)external\lua\lua;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;$(EngineRoot);$(EngineRoot)external\curl\include\win32;$(EngineRoot)external\glfw3\include\win32;$(EngineRoot)external\libpomelo2\include;$(EngineRoot)external\libpomelo2\deps\openssl\openssl\include;$(EngineRoot)external\libpomelo2\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -191,6 +191,7 @@ xcopy /Y /Q "$(TargetPath)" "$(ProjectDir)..\win32\"</Command>
     <ClInclude Include="..\..\lib\quick-src\extra\nanovg\nanovg\nanovg_gl_utils.h" />
     <ClInclude Include="..\..\lib\quick-src\extra\nanovg\nanovg\stb_image.h" />
     <ClInclude Include="..\..\lib\quick-src\extra\nanovg\nanovg\stb_truetype.h" />
+    <ClInclude Include="..\..\lib\quick-src\lua_extensions\pomelo\lpomelo.h" />
     <ClInclude Include="..\..\lib\quick-src\lua_extensions\pomelo\lua_pomelo.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\ConfigParser.h" />
@@ -318,6 +319,11 @@ xcopy /Y /Q "$(TargetPath)" "$(ProjectDir)..\win32\"</Command>
     <ClCompile Include="..\..\lib\quick-src\extra\nanovg\nanonode\NVGDrawNode.cpp" />
     <ClCompile Include="..\..\lib\quick-src\extra\nanovg\nanonode\NVGNode.cpp" />
     <ClCompile Include="..\..\lib\quick-src\extra\nanovg\nanovg\nanovg.c" />
+    <ClCompile Include="..\..\lib\quick-src\lua_extensions\pomelo\lpomelo.c">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </ForcedIncludeFiles>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
     <ClCompile Include="..\..\lib\quick-src\lua_extensions\pomelo\lua_pomelo.c">
       <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
       <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

@@ -1,3 +1,4 @@
+#include "lpomelo.h"
 
 #ifndef __LUA_POMELO_H_
 #define __LUA_POMELO_H_
