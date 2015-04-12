@@ -5,6 +5,8 @@
 #include <lua.h>
 #include <pomelo.h>
 
+
+
 struct pomelo_client_s {
     pc_client_t* client;
     lua_State* state;
@@ -115,7 +117,7 @@ static void default_event_cb(pc_client_t* client, int ev_type, void* ex_data, co
     lua_pushinteger(L, ev_type);
     lua_pushstring(L, arg1);
     lua_pushstring(L, arg2);
-    if (lua_pcall(L, 4, 1, 0) != 0) {
+    if (lua_pcall(L, 3, 1, 0) != 0) {
         error = lua_tostring(L, -1);
         luaL_error(L, error);
     } else if (lua_isnone(L, -1) ) {
@@ -128,20 +130,23 @@ static void default_request_cb(const pc_request_t* req, int rc, const char* resp
 {
     int enable_poll;
     const char* error;
-    pc_client_t* client = pc_request_client(req);
-    lua_State* L = ext_lua_get_function_state((lua_State* )pc_request_ex_data(req), "request_cb");
-    
+    pc_client_t* client;
+    lua_State* L;
+	int ret;
+
+	client = pc_request_client(req);
+	L = ext_lua_get_function_state((lua_State* )pc_request_ex_data(req), "request_cb");
+
     assert(client && L);
     enable_poll = pc_client_config(client)->enable_polling;
-    
     lua_pushinteger(L, rc);
     lua_pushstring(L, resp);
-    if (lua_pcall(L, 3, 1, 0) != 0) {
+    ret = lua_pcall(L, 2, 0, 0);
+    if (ret != 0) {
         error = lua_tostring(L, -1);
         luaL_error(L, error);
-    } else if (lua_isnone(L, -1) ) {
-        luaL_error(L, "error...");
     }
+	
 }
 
 static void default_notify_cb(const pc_notify_t* notify, int rc)
@@ -155,7 +160,7 @@ static void default_notify_cb(const pc_notify_t* notify, int rc)
     enable_poll = pc_client_config(client)->enable_polling;
     
     lua_pushinteger(L, rc);
-    if (lua_pcall(L, 2, 1, 0) != 0) {
+    if (lua_pcall(L, 1, 1, 0) != 0) {
         error = lua_tostring(L, -1);
         luaL_error(L, error);
     } else if (lua_isnone(L, -1) ) {
@@ -173,7 +178,7 @@ static int local_storage_cb(pc_local_storage_op_t op, char* data, size_t* len, v
 	if (op == PC_LOCAL_STORAGE_OP_WRITE) {
 		lua_pushinteger(L, op);
 		lua_pushlstring(L, data, *len);
-		if (lua_pcall(L, 3, 1, 0) != 0) {
+		if (lua_pcall(L, 2, 1, 0) != 0) {
 			error = lua_tostring(L, -1);
 			luaL_error(L, error);
 		} else if (lua_isnone(L, -1) ) {
@@ -291,17 +296,20 @@ static int create(lua_State* L) {
     pclient = (pomelo_client_t*)lua_touserdata(L, -1);
     pclient->client = client;
     pclient->state = ls_ex_data;
-	
     return 1;
 }
 
 static int connect(lua_State* L) {
-    pc_client_t* client;
+    pomelo_client_t* pclient;
+	pc_client_t* client = NULL;
     char* host = NULL;
     int port = 0;
     int ret;
 
-	client = (pc_client_t* )lua_touserdata(L, 1);
+	pclient = (pomelo_client_t* )lua_touserdata(L, 1);
+	assert(pclient);
+	client = pclient->client;
+	assert(client);
 	host = (char*)luaL_checkstring(L, 2);
 	port = luaL_checkinteger(L, 3);
 
@@ -312,9 +320,14 @@ static int connect(lua_State* L) {
 }
 
 static int state(lua_State* L) {
-    pc_client_t* client;
+    pomelo_client_t* pclient;
+	pc_client_t* client = NULL;
     int state;
 
+	pclient = (pomelo_client_t* )lua_touserdata(L, 1);
+	assert(pclient);
+	client = pclient->client;
+	assert(client);
     client = (pc_client_t* )lua_touserdata(L, 1);
     
     state = pc_client_state(client);
@@ -359,7 +372,6 @@ static int rm_ev_handler(lua_State* L) {
     client = pclient->client;
 	assert(client);
     ret = pc_client_rm_ev_handler(client, handler_id);
-
     lua_pushinteger(L, ret);
     return 1;
 }
@@ -385,7 +397,7 @@ static int request(lua_State* L) {
     ext_lua_reg_function_state(ls_ex_data, L, -1, "request_cb");
     
     ret = pc_request_with_timeout(client, route, msg,
-                                  L, timeout, default_request_cb);
+                                  ls_ex_data, timeout, default_request_cb);
     lua_pushinteger(L, ret);
     return 1;
 }
@@ -411,7 +423,7 @@ static int notify(lua_State* L) {
     ext_lua_reg_function_state(ls_ex_data, L, -1, "notify_cb");
 
     ret = pc_notify_with_timeout(client, route, msg,
-                                 L, timeout, default_notify_cb);
+                                 ls_ex_data, timeout, default_notify_cb);
 
     lua_pushinteger(L, ret);
     return 1;
@@ -467,16 +479,18 @@ static int destroy(lua_State* L) {
     pc_client_t* client;
     int ret;
     
+	
     pclient = (pomelo_client_t* )lua_touserdata(L, 1);
 	assert(pclient);
     client = pclient->client;
     assert(client);
     ret = pc_client_cleanup(client);
-	
     if (ret == PC_RC_OK) {
 		if(pclient->state) {
 			ext_lua_unreg_state(pclient->state);
 		}
+		pclient->state = NULL;
+		pclient->client = NULL;
         free(client);
     }
     
