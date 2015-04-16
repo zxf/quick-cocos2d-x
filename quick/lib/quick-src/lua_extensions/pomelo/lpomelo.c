@@ -7,20 +7,26 @@
 #include "lauxlib.h"
 #include "lpomelo.h"
 
-static void strcopy(char* dest, const char* src) {
+static void strcopy(char** dest, const char* src) {
+	if(*dest){
+		free(*dest);
+	}
     if(src) {
-        dest = (char*)malloc(sizeof(char)*(strlen(src) + 1));
-        strcpy(dest, src);
+        *dest = (char*)malloc(sizeof(char)*(strlen(src) + 1));
+        strcpy(*dest, src);
     } else {
-        dest = NULL;
+        *dest = NULL;
     }
 }
 
 lpomelo_event_recv_t* lpomelo_event_recv_create(int ev, const char* arg1, const char* arg2) {
     lpomelo_event_recv_t* recv;
+	recv = (lpomelo_event_recv_t* )malloc(sizeof(lpomelo_event_recv_t));
     recv->ev = ev;
-    strcopy(recv->arg1, arg1);
-    strcopy(recv->arg2, arg2);
+	recv->arg1 = NULL;
+	recv->arg2 = NULL;
+    strcopy(&recv->arg1, arg1);
+    strcopy(&recv->arg2, arg2);
     return recv;
 }
 
@@ -42,7 +48,8 @@ lpomelo_request_recv_t* lpomelo_request_recv_create(int ret, int rc, const char*
     recv = (lpomelo_request_recv_t* )malloc(sizeof(lpomelo_request_recv_t));
     recv->ret = ret;
     recv->rc = rc;
-    strcopy(recv->resp, resp);
+	recv->resp = NULL;
+    strcopy(&recv->resp, resp);
     return recv;
 }
 
@@ -76,18 +83,27 @@ lpomelo_buffer_t* lpomelo_buffer_create(int size, int flag) {
     buffer = (lpomelo_buffer_t* )malloc(sizeof(lpomelo_buffer_t));
     assert(buffer);
     buffer->size = size;
-    buffer->free = 0;
+    buffer->free = size;
     buffer->flag = flag;
+	buffer->first = NULL;
+	buffer->last = NULL;
     return buffer;
 }
 
 int lpomelo_buffer_push(lpomelo_buffer_t* buffer, void* data) {
     lpomelo_buffer_entity_t* entity;
+	int free_size;
     if (buffer->free > 0){
         entity = (lpomelo_buffer_entity_t* )malloc(sizeof(lpomelo_buffer_entity_t));
         assert(entity);
         entity->data = data;
-        buffer->last->next = entity;
+		entity->next = NULL;
+		if(!buffer->first){
+			buffer->first = entity;
+		}
+		if(buffer->last) {
+			buffer->last->next = entity;
+		}
         buffer->last = entity;
         buffer->free --;
         return 0;
@@ -95,9 +111,13 @@ int lpomelo_buffer_push(lpomelo_buffer_t* buffer, void* data) {
     return -1;
 }
 
+int lpomelo_event_buffer_push(lpomelo_buffer_t* buffer, lpomelo_event_recv_t* data) {
+	return lpomelo_buffer_push(buffer, (void*)data);
+}
+
 void* lpomelo_buffer_pop(lpomelo_buffer_t* buffer) {
     lpomelo_buffer_entity_t* entity;
-    void* data;
+    void* data=NULL;
     if (buffer->free < buffer->size){
         entity = buffer->first;
         buffer->first = entity->next;
@@ -108,19 +128,31 @@ void* lpomelo_buffer_pop(lpomelo_buffer_t* buffer) {
     return data;
 }
 
+lpomelo_event_recv_t* lpomelo_event_buffer_pop(lpomelo_buffer_t* buffer) {
+	lpomelo_event_recv_t* recv=NULL;
+	void* data;
+	data = lpomelo_buffer_pop(buffer);
+	if(data){
+		recv = (lpomelo_event_recv_t*)data;
+	}
+	return recv;
+}
+
 void lpomelo_buffer_destroy(lpomelo_buffer_t* buffer) {
     if (!buffer){
         return;
     }
     free(buffer);
+	buffer = NULL;
 }
 
 void lpomelo_event_buffer_destory(lpomelo_buffer_t* buffer) {
     if (!buffer){
         return;
     }
+	buffer->flag = -1;
     while (buffer->free < buffer->size) {
-         lpomelo_event_recv_destroy(lpomelo_buffer_pop(buffer));
+		lpomelo_event_recv_destroy(lpomelo_event_buffer_pop(buffer));
     }
     lpomelo_buffer_destroy(buffer);
 }
@@ -150,13 +182,13 @@ static int lpomelo_lua_rmstate(lua_State* L){
 static int lpomelo_lua_regfunc(lua_State* L, lua_State* S){
     int ref;
     lua_State* src_L;
-    if (!S) {
+    if (S) {
         src_L = S;
     } else {
         src_L = L;
     }
-    if(!lua_isfunction(L, -1) && !lua_iscfunction(L, -1)) {
-        luaL_error(L, "type error: %s is not a function.", lua_typename(L, lua_type(L, -1)));
+    if(!lua_isfunction(src_L, -1) && !lua_iscfunction(src_L, -1)) {
+        luaL_error(src_L, "type error: %s is not a function.", lua_typename(src_L, lua_type(src_L, -1)));
     } else {
         ref = lua_tointeger(L, 1);
         lua_rawgeti(src_L, LUA_REGISTRYINDEX, ref);
@@ -248,7 +280,7 @@ static int local_storage_cb(pc_local_storage_op_t op, char* data, size_t* len, v
     char* res = NULL;
     const char* error;
     lua_State* L = (lua_State*)ex_data;
-    lua_pushstring(L, "storage_db");
+    lua_pushstring(L, "storage_cb");
     lpomelo_lua_getfunc(L);
     if (op == PC_LOCAL_STORAGE_OP_WRITE) {
         lua_pushinteger(L, op);
@@ -329,7 +361,7 @@ static void default_request_cb(const pc_request_t* req, int rc, const char* resp
     enable_poll = pc_client_config(client)->enable_polling;
     recv->rc = rc;
     recv->rec = 1;
-    strcopy(recv->resp, resp);
+    strcopy(&recv->resp, resp);
 }
 
 
@@ -465,7 +497,7 @@ int lpomelo_state(lua_State* L, int idx) {
 
 int lpomelo_sub(lua_State* L, int idx) {
     int size = 1024;
-    int ev_type;
+    int ev_type = NULL;
     int ret;
     lpomelo_buffer_t* buffer;
     lpomelo_client_t* client;
@@ -480,7 +512,7 @@ int lpomelo_sub(lua_State* L, int idx) {
     lua_pop(L, 2);
     buffer = lpomelo_buffer_create(size, ev_type);
     ret = pc_client_add_ev_handler(client->client, default_event_cb, buffer, default_destructor);
-    if (ret != PC_EV_INVALID_HANDLER_ID) {
+    if (ret == PC_EV_INVALID_HANDLER_ID) {
         lpomelo_event_buffer_destory(buffer);
         return 0;
     }
@@ -497,7 +529,6 @@ int lpomelo_sub_close(lua_State* L, int idx) {
     buffer = lpomelo_tobuffer(L, -1);
     assert(client && client->client && buffer);
     ret = pc_client_rm_ev_handler(client->client, buffer->hid);
-    lpomelo_event_buffer_destory(buffer);
     lua_pop(L, 1);
     lua_pushinteger(L, ret);
     return 1;
@@ -507,8 +538,9 @@ int lpomelo_sub_result(lua_State* L, int idx) {
     lpomelo_event_recv_t* recv;
     lpomelo_buffer_t* buffer;
     buffer = lpomelo_tobuffer(L, idx);
-    
-    recv = (lpomelo_event_recv_t*)lpomelo_buffer_pop(buffer);
+
+    recv = lpomelo_event_buffer_pop(buffer);
+
     if(recv) {
         lua_pushinteger(L, recv->ev);
         lua_pushstring(L, recv->arg1);
@@ -553,7 +585,7 @@ int lpomelo_request_result(lua_State* L, int idx) {
     recv = lpomelo_torequestrecv(L, idx);
     if(recv->rec) {
         lua_pushinteger(L, recv->rc);
-        lua_pushinteger(L, recv->resp);
+        lua_pushstring(L, recv->resp);
         return 2;
     }
     return 0;

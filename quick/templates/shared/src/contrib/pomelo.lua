@@ -3,46 +3,46 @@ require("luapomelo")
 --[[
 --example
 local json = require("framework.json")
+local socket = require("socket")
 
 local storage = {
 }
 
-pomelo.lib_init(pomelo.PC_LOG_WARN, nil, nil)
+pomelo.lib_init(pomelo.PC_LOG_DEBUG, nil, nil)
 local client = pomelo.Client.new()
 
 client:init(true, false, function(op, data)
-if op == pomelo.PC_LOCAL_STORAGE_OP_WRITE then
-storage = json.decode(data)
-return 0
-else
-return json.encode(storage)
-end
+    if op == pomelo.PC_LOCAL_STORAGE_OP_WRITE then
+        storage = json.decode(data)
+        return 0
+    else
+        return json.encode(storage)
+    end
 end)
 
-local handler_id = client:add_ev_handler(function(ev, arg1, arg2)
-if ev == Client.PC_EV_USER_DEFINED_PUSH then
-print('get push message, route: ', arg1, 'msg: ', arg2)
-else
-print('network event:', pomelo.ev_to_str(ev), arg1, arg2)
-end
-end)
+client:connect('192.168.210.147', 3011)
+recv = client:sub()
+print(recv:result())
+socket.sleep(2)
+print(recv:result())
+recv:close()
 
+socket.sleep(1)
+resp = client:request('connector.entryHandler.entry', '{"name": "test"}', 10)
+socket.sleep(1)
+print(resp:result())
+resp:close()
 
-client:connect('127.0.0.1', 3011)
+resp = client:notify('test.testHandler.notify', '{"content": "test content"}', 10)
+socket.sleep(1)
+print(resp:result())
+resp:close()
 
-client:request('connector.entryHandler.entry', '{"name": "test"}', 10, function()
-print('request status: ', pomelo.rc_to_str(rc), 'resp:', resp)
-end);
-
-client:notify('test.testHandler.notify', '{"content": "test content"}', 10, function()
-print('notify status: ', pomelo.rc_to_str(rc))
-end)
-
-client:rm_ev_handler(handler_id)
+client:disconnect()
 
 client:destroy()
-
 pomelo.lib_cleanup()
+
 ]]
 if not pomelo then 
     pomelo = {
