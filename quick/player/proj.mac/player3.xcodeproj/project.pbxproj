@@ -11,11 +11,6 @@
 		15427CEE198F24AF00DC375D /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A8A4171834BDA200142BE0 /* libcocos2d Mac.a */; };
 		15A8A4881834C90F00142BE0 /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 15A8A4871834C90E00142BE0 /* libcurl.dylib */; };
 		15AA9649199B6D4600725633 /* lua_debugger.c in Sources */ = {isa = PBXBuildFile; fileRef = 15AA9646199B6D4600725633 /* lua_debugger.c */; };
-		163F05F51AC7DD2200894957 /* libpomelo2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 163F05F41AC7DCDE00894957 /* libpomelo2.a */; };
-		163F060A1AC7E9E500894957 /* libopenssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 163F06091AC7E9E500894957 /* libopenssl.a */; };
-		163F060C1AC7E9E900894957 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 163F060B1AC7E9E900894957 /* libuv.a */; };
-		163F06101AC7EBFC00894957 /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 163F060F1AC7EBFC00894957 /* libjansson.a */; };
-		163FED7A1AC7A11C00894957 /* lua_pomelo.c in Sources */ = {isa = PBXBuildFile; fileRef = 163FED781AC7A11C00894957 /* lua_pomelo.c */; };
 		3EB5152D19528284006966AA /* Protos.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3EB5152A19528284006966AA /* Protos.pb.cc */; };
 		494047851A31C0A6004CECA6 /* nanovg.c in Sources */ = {isa = PBXBuildFile; fileRef = 4940477F1A31C0A6004CECA6 /* nanovg.c */; };
 		4940478A1A31C0EF004CECA6 /* NVGNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 494047881A31C0EF004CECA6 /* NVGNode.cpp */; };
@@ -112,6 +107,12 @@
 		C0619CD81896894800872C26 /* Runtime_ios-mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0619CD61896894800872C26 /* Runtime_ios-mac.mm */; };
 		C06C3797191A1D1E00617BED /* ConfigParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C06C3794191A1D1E00617BED /* ConfigParser.cpp */; };
 		C07828F818B4D72E00BD2287 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C07828F418B4D72E00BD2287 /* main.m */; };
+		DC59D3641ADE6EF000133C20 /* lua_pomelo.c in Sources */ = {isa = PBXBuildFile; fileRef = DC59D3621ADE6EF000133C20 /* lua_pomelo.c */; };
+		DC59D3711ADE6F1F00133C20 /* lpomelo.c in Sources */ = {isa = PBXBuildFile; fileRef = DC59D36F1ADE6F1F00133C20 /* lpomelo.c */; };
+		DC59D3731ADF7A9B00133C20 /* libjansson.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC59D3721ADF7A9B00133C20 /* libjansson.a */; };
+		DC59D3751ADF7AA400133C20 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC59D3741ADF7AA400133C20 /* libuv.a */; };
+		DC59D3771ADF7AAB00133C20 /* libopenssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC59D3761ADF7AAB00133C20 /* libopenssl.a */; };
+		DC59D3781ADF7AB100133C20 /* libpomelo2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 163F05F41AC7DCDE00894957 /* libpomelo2.a */; };
 		F405C6C919ED14AA005AD31C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F405C6CB19ED14AA005AD31C /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
@@ -186,8 +187,6 @@
 		163F06091AC7E9E500894957 /* libopenssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopenssl.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/player3-aznbvvquswhorpewfcokmtspxhbn/Build/Products/Default/libopenssl.a"; sourceTree = "<group>"; };
 		163F060B1AC7E9E900894957 /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuv.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/player3-aznbvvquswhorpewfcokmtspxhbn/Build/Products/Default/libuv.a"; sourceTree = "<group>"; };
 		163F060F1AC7EBFC00894957 /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjansson.a; path = "../../../../../../Library/Developer/Xcode/DerivedData/player3-aznbvvquswhorpewfcokmtspxhbn/Build/Products/Default/libjansson.a"; sourceTree = "<group>"; };
-		163FED781AC7A11C00894957 /* lua_pomelo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lua_pomelo.c; sourceTree = "<group>"; };
-		163FED791AC7A11C00894957 /* lua_pomelo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_pomelo.h; sourceTree = "<group>"; };
 		1AF4C402178663F200122817 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3EB51526195187AF006966AA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3EB5152A19528284006966AA /* Protos.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Protos.pb.cc; sourceTree = "<group>"; };
@@ -430,6 +429,13 @@
 		C06C3795191A1D1E00617BED /* ConfigParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfigParser.h; path = ../Classes/ConfigParser.h; sourceTree = "<group>"; };
 		C07828F418B4D72E00BD2287 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6B061341803AC000077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		DC59D3621ADE6EF000133C20 /* lua_pomelo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lua_pomelo.c; sourceTree = "<group>"; };
+		DC59D3631ADE6EF000133C20 /* lua_pomelo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lua_pomelo.h; sourceTree = "<group>"; };
+		DC59D36F1ADE6F1F00133C20 /* lpomelo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lpomelo.c; sourceTree = "<group>"; };
+		DC59D3701ADE6F1F00133C20 /* lpomelo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lpomelo.h; sourceTree = "<group>"; };
+		DC59D3721ADF7A9B00133C20 /* libjansson.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjansson.a; path = ../../../external/libpomelo2/deps/jansson/Debug.mac/libjansson.a; sourceTree = "<group>"; };
+		DC59D3741ADF7AA400133C20 /* libuv.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libuv.a; path = ../../../external/libpomelo2/deps/uv/Debug.mac/libuv.a; sourceTree = "<group>"; };
+		DC59D3761ADF7AAB00133C20 /* libopenssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libopenssl.a; path = ../../../external/libpomelo2/deps/openssl/Debug.mac/libopenssl.a; sourceTree = "<group>"; };
 		F293B3CC15EB7BE500256477 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F293B3CE15EB7BE500256477 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		F293B3D015EB7BE500256477 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -448,10 +454,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				163F06101AC7EBFC00894957 /* libjansson.a in Frameworks */,
-				163F060C1AC7E9E900894957 /* libuv.a in Frameworks */,
-				163F060A1AC7E9E500894957 /* libopenssl.a in Frameworks */,
-				163F05F51AC7DD2200894957 /* libpomelo2.a in Frameworks */,
+				DC59D3781ADF7AB100133C20 /* libpomelo2.a in Frameworks */,
+				DC59D3771ADF7AAB00133C20 /* libopenssl.a in Frameworks */,
+				DC59D3751ADF7AA400133C20 /* libuv.a in Frameworks */,
+				DC59D3731ADF7A9B00133C20 /* libjansson.a in Frameworks */,
 				9FD01B0D19F8C58C005E0C49 /* SystemConfiguration.framework in Frameworks */,
 				15427CEE198F24AF00DC375D /* libcocos2d Mac.a in Frameworks */,
 				15427CEC198F24A600DC375D /* libluacocos2d Mac.a in Frameworks */,
@@ -491,8 +497,10 @@
 		163FED771AC7A11C00894957 /* pomelo */ = {
 			isa = PBXGroup;
 			children = (
-				163FED781AC7A11C00894957 /* lua_pomelo.c */,
-				163FED791AC7A11C00894957 /* lua_pomelo.h */,
+				DC59D36F1ADE6F1F00133C20 /* lpomelo.c */,
+				DC59D3701ADE6F1F00133C20 /* lpomelo.h */,
+				DC59D3621ADE6EF000133C20 /* lua_pomelo.c */,
+				DC59D3631ADE6EF000133C20 /* lua_pomelo.h */,
 			);
 			path = pomelo;
 			sourceTree = "<group>";
@@ -998,6 +1006,9 @@
 		F293B3CB15EB7BE500256477 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC59D3761ADF7AAB00133C20 /* libopenssl.a */,
+				DC59D3741ADF7AA400133C20 /* libuv.a */,
+				DC59D3721ADF7A9B00133C20 /* libjansson.a */,
 				163F060F1AC7EBFC00894957 /* libjansson.a */,
 				163F060B1AC7E9E900894957 /* libuv.a */,
 				163F06091AC7E9E500894957 /* libopenssl.a */,
@@ -1188,7 +1199,6 @@
 				9F72898E1A24957700EE0234 /* lfs.c in Sources */,
 				9F7289951A24957700EE0234 /* SimulatorConfig.cpp in Sources */,
 				9F72893D1A24957700EE0234 /* CCSaturationFilter.cpp in Sources */,
-				163FED7A1AC7A11C00894957 /* lua_pomelo.c in Sources */,
 				49C655D31A36C71400603AF5 /* lua_cocos2dx_extension_nanovg_manual.cpp in Sources */,
 				9FD0193419F8C4D4005E0C49 /* PlayerTaskServiceProtocol.cpp in Sources */,
 				9F72892B1A24957700EE0234 /* HelperFunc.cpp in Sources */,
@@ -1214,6 +1224,7 @@
 				15AA9649199B6D4600725633 /* lua_debugger.c in Sources */,
 				9FD0193019F8C4D4005E0C49 /* PlayerMenuServiceProtocol.cpp in Sources */,
 				C00FD4991938512100C6382D /* Portrait_png.cpp in Sources */,
+				DC59D3641ADE6EF000133C20 /* lua_pomelo.c in Sources */,
 				9F7289371A24957700EE0234 /* CCGammaFilter.cpp in Sources */,
 				9FD0193119F8C4D4005E0C49 /* PlayerProtocol.cpp in Sources */,
 				9F72897D1A24957700EE0234 /* OpenUDIDMac.m in Sources */,
@@ -1225,6 +1236,7 @@
 				9FD0193519F8C4D4005E0C49 /* PlayerUtils.cpp in Sources */,
 				9F72898A1A24957700EE0234 /* lua_cjson.c in Sources */,
 				49C655D01A3692EF00603AF5 /* lua_cocos2dx_extension_nanovg_auto.cpp in Sources */,
+				DC59D3711ADE6F1F00133C20 /* lpomelo.c in Sources */,
 				9F72893F1A24957700EE0234 /* CCSharpenFilter.cpp in Sources */,
 				C00FD49B1938512100C6382D /* Runtime.cpp in Sources */,
 				9F7289631A24957700EE0234 /* HelperFunc_luabinding.cpp in Sources */,
@@ -1317,6 +1329,9 @@
 					"/Users/jryin/workspace/cocos2d-x-dualface/quick/lib/quick-src/extra/anysdk/protocols/android/lib/x86",
 					"/Users/wuhuili/Develop/lab/quick-cocos2d-x/external/libpomelo2/deps/jansson/build/Default",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-aznbvvquswhorpewfcokmtspxhbn/Build/Products/Default",
+					"/Users/felix/Develop/lab/quick-cocos2d-x/external/libpomelo2/deps/jansson/Debug.mac",
+					"/Users/felix/Develop/lab/quick-cocos2d-x/external/libpomelo2/deps/uv/Debug.mac",
+					"/Users/felix/Develop/lab/quick-cocos2d-x/external/libpomelo2/deps/openssl/Debug.mac",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
@@ -1356,6 +1371,9 @@
 					"/Users/jryin/workspace/cocos2d-x-dualface/quick/lib/quick-src/extra/anysdk/protocols/android/lib/x86",
 					"/Users/wuhuili/Develop/lab/quick-cocos2d-x/external/libpomelo2/deps/jansson/build/Default",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/player3-aznbvvquswhorpewfcokmtspxhbn/Build/Products/Default",
+					"/Users/felix/Develop/lab/quick-cocos2d-x/external/libpomelo2/deps/jansson/Debug.mac",
+					"/Users/felix/Develop/lab/quick-cocos2d-x/external/libpomelo2/deps/uv/Debug.mac",
+					"/Users/felix/Develop/lab/quick-cocos2d-x/external/libpomelo2/deps/openssl/Debug.mac",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
